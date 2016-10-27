@@ -61,7 +61,7 @@
 		<a href="ThongTinCaNhan.jsp" class="list-group-item "><span class="pull-right"></span>Thông Tin Cá Nhân</a>
 		<a href="DangKyDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Đăng Ký Đề Tài</a>
 		<a href="TinhTrangDeTai.jsp" class="list-group-item  active"><span class="pull-right"></span>Trình Trạng Đề Tài </a>
-		<a href="HuyDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Hủy Đề Tài </a>      
+		<a href="GiaHan-HuyDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Hủy Đề Tài </a>      
     </div>
                     </div>
                 </div>
