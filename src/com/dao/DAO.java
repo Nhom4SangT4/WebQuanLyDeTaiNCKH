@@ -13,7 +13,7 @@ public class DAO {
         String dbName = "qldtnckh";  
         String driver = "com.mysql.jdbc.Driver";  
         String userName = "root";  
-        String password = "nuhonkuoi";
+        String password = "123456";
 		Connection conn=null;
 		try {
 			Class.forName(driver).newInstance();

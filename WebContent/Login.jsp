@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
+<%@page import="java.sql.*" %>
 <%@ page import="javax.servlet.http.*" %>
 <% Class.forName("com.mysql.jdbc.Driver"); %>
 <% 
