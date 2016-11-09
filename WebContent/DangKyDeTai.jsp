@@ -73,21 +73,21 @@
         <span>
             <span id="random_tin">
             <i class="icon-bullhorn"></i>&nbsp;
-            <img src="bullet-blue-icon.png" />
+            <img src="images/bullet-blue-icon.png" />
             </span>
            
         </span>    
     </div>
 <div id="w">
 <div class="body">
-	<center><h1>Đăng Ký Đề Tài</h1><center>
+	<center><h1>Đăng Ký Đề Tài Sinh Viên</h1></center>
 <form id="contactform" name="contact" action="dangkydetaiServlet" method="post">
   <p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p>
   <table border="0" cellpadding="0" cellspacing="0">
-  <tr class="table">
-    <td for="name">Họ Tên: <span class="req">*</span></td>
+  <div class="row">
+    <lable for="name">Họ Tên: <span class="req">*</span></lable>
     <input type="text" name="txtname" id="txtname" class="txt" tabindex="1" placeholder="Họ và tên" required>
-  </tr>
+  </div>
    
   <div class="row">
     <label for="MSSV">MSSV: <span class="req">*</span></label>
