@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <ol class="breadcrumb">
-  <li><a href="#">Home</a></li><li class="active">Quản Lý</li></ol>               </div>
+  <li><a href="#">Home</a></li><li class="active">Quản Lý</li></ol></div>
             </div>
         </div>
     </div>

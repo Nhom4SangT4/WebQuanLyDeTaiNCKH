@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?> 
+<Banner 
+	bannerWidth="816"
+	bannerHeight="220"
+
+	textSize="18"
+	textColor=""
+	textAreaWidth=""
+	textLineSpacing="0"	
+	textLetterSpacing="-0.5"	
+	textMarginLeft="12"
+	textMarginBottom="5"
+	
+	transitionType="3"
+	transitionDelayTimeFixed="2" 
+	transitionDelayTimePerWord=".5"
+	transitionSpeed="5"
+	transitionBlur="yes"
+	transitionRandomizeOrder="yes"	
+	
+	showTimerClock="yes"
+	showBackButton="yes"
+	showNumberButtons="yes"
+	showNumberButtonsAlways="yes"
+	showNumberButtonsHorizontal="yes"
+	showNumberButtonsAscending="yes"
+	autoPlay="yes"
+	
+	>
+	
+	<item image="banner_images/MYB_Banner1.jpg" 
+		link="http://www.google.com"
+		target="_blank"
+		textBlend="no"><![CDATA[
+	]]></item>
+
+	<item image="banner_images/MYB_Banner2.jpg" 
+		link="http://www.google.com"
+		target="_blank"
+		textBlend="no"><![CDATA[Sinh viên phấn khởi tham gia nghiên cứu khoa học.
+	]]></item>	
+
+	<item image="banner_images/MYB_Banner3.jpg"
+		link="http://www.google.com"
+		target="_blank"
+		textBlend="yes"><![CDATA[Lễ ký kết hợp đồng nghiên cứu khoa học.
+	]]></item>
+
+	<item image="banner_images/MYB_Banner4.jpg"
+		link="http://www.google.com"
+		target="_blank"
+		textBlend="no"><![CDATA[Một trong những hoạt động NCKH.
+	]]></item>
+
+	
+</Banner>
+

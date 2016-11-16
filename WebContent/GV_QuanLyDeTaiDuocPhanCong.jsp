@@ -110,74 +110,9 @@
                         </div>
                     </div>
     
-</div>
-<script>
-$(document).ready(function(){
-    $("#hinh_thuc").change(function(){
-        //document.location.href = $(this).val();
-        alert($(this).val());
-    });
-});
-</script>
-<script>
-$(document).ready(function(){
-    $("#lst_gv").change(function(){
-        var id_gv = $(this).val();
-        if (id_gv == 'all')
-        {
-            //return false;
-            location.reload();
-        }
-        else
-        {
-            var cauhinh_id = '44';
-            var cn_id = 'page'
-            //alert(cn_id);
-            var form_data_gv = {
-                gv_id: id_gv,
-                cauhinh_id: cauhinh_id,
-                cn_id : cn_id
-            };
-            $.ajax({
-                url:'http://dkdt.fit.hcmute.edu.vn/giang-vien-de-tai.html',
-                type:'POST',
-                cache:true,
-                data: form_data_gv,
-                success:function(msg_form_gv){
-                    $("#show_detai").html(msg_form_gv);
-                }
-                });
-                return false;
-        }
-    });  
-});
- $(document).ajaxStart(function () {
-        $("#loading").show();
-    }).ajaxStop(function () {
-        $("#loading").hide();
-    });
-</script>
-  <div class="well-sm">
-        <span>
-            <span id="random_tin">
-            <i class="icon-bullhorn"></i>&nbsp;
-            <img src="images/bullet-blue-icon.png" />
-                        <small>
-                <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
-                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
-                </a>
-            </small>
-            <img src="images/new1.gif"/>
-            </span>
-           
-        </span>    
-    </div>
-                        
+</div>             
                     <ol class="breadcrumb">
-  <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
-            </div>
-        </div>
-    </div>
+  <li><a href="#">Home</a></li><li class="active">Danh sách đề tài</li></ol>
     <div class="container">
         <div id="footer">
         <hr />

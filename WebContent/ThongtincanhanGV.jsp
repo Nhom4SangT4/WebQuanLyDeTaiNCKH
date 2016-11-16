@@ -59,10 +59,11 @@
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
        	<a href="HomeDuyetDT.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
-       	<a href="QuanLy.jsp" class="list-group-item active"><span class="pull-right"></span>Thông tin cá nhân</a>
+       	<a href="ThongtincanhanGV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông tin cá nhân</a>
+       	<a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
 		<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý đề tài của tôi</a>
 		<a href="ThongKe.jsp" class="list-group-item "><span class="pull-right"></span>Thống Kê</a>
-		<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
+		<a href="GV_QuanLyDeTaiDuocPhanCong.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
 		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
     </div>
                     </div>
