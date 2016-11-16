@@ -25,7 +25,7 @@
 			<div id="pnTopDisplay" style="width:1366px;float:left;
 ">
 				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:1100px;float:left;padding:15px 0px 0px 0px;">
-					<div class="logo_ute"><a href="#"><img alt="" src="skpt_banner_2.jpg" width="1000" height="150"></a><br>
+					<div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg" width="1000" height="150"></a><br>
 					</div>
 
 				</div><div>

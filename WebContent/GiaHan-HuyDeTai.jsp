@@ -26,7 +26,7 @@
 			<div id="pnTopDisplay" style="width:1000px;float:left;
 ">
 				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
-					<div class="logo_ute"><a href="#"><img alt="" src="skpt_banner_2.jpg"></a><br>
+					<div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
 					</div>
 
 				</div><div>
@@ -72,45 +72,48 @@
         <span>
             <span id="random_tin">
             <i class="icon-bullhorn"></i>&nbsp;
-            <img src="bullet-blue-icon.png" />
+            <img src="images/bullet-blue-icon.png" />
             </span>
            
         </span>    
     </div>
-                        <div id="w">
+                        <div id="w" class="body">
 	<h1>Gia Hạn - Hủy Đề Tài</h1>
 <form id="contactform" name="contact" action="dangkydetaiServlet" method="post">
   <p class="note"><span class="req">*</span> Điền đầy đủ thông tin</p>
-  <div class="row">
-    <label for="name">Họ Tên: <span class="req">*</span></label>
-    <input type="text" name="txtname" id="txtname" class="txt" tabindex="1" placeholder="Họ và tên" required>
+  <table border="0" cellpadding="0" cellspacing="0">
+  
+  <div class="table">
+    <lable for="name">Họ Tên: <span class="req">*</span></lable>
+    <input type="text" name="txtname" id="txtname" class="txt" tabindex="1" placeholder="Họ và tên" required></input>
   </div>
    
-  <div class="row">
-    <label for="MSSV">MSSV: <span class="req">*</span></label>
-    <input type="text" name="txtmssv" id="txtmssv" class="txt" tabindex="2" placeholder="Mã số sinh viên" required>
+  <div class="table">
+    <lable for="MSSV">MSSV: <span class="req">*</span></lable>
+    <input type="text" name="txtmssv" id="txtmssv" class="txt" tabindex="2" placeholder="Mã số sinh viên" required></input>
   </div>
   
-  <div class="row">
+  <div class="table">
     <label for="MaDeTai">Mã đề tài: <span class="req">*</span></label>
     <input type="text" name="txtmadetai" id="txtmadetai" class="txt" tabindex="2" placeholder="Mã đề tài" required>
   </div>
    
-   <div class="row">
+   <div class="table">
     <label for="GVHD">GVHD: <span class="req">*</span></label>
     <input type="text" name="txtgvhd" id="txtgvhd" class="txt" tabindex="3" placeholder="Giáo viên hướng dẩn" required>
   </div>
    
   
    
-  <div class="row">
+  <div class="table">
     <label for="message">Lý Do Hủy-Gia Hạn đề tài: <span class="req"></span></label>
     <textarea name="ghichu" id="ghichu" class="txtarea" tabindex="8" required></textarea>
   </div>
    
   <div class="center">
-    <input type="submit" id="submitbtn" name="button" tabindex="9" value="Gửi">
-    </div>
+    <input type="submit" id="submitbtn" name="button" class="btn btn-Success" tabindex="9" value="Gửi">
+  </div>
+  </table>
 </form>
 </div>
                     <ol class="breadcrumb">

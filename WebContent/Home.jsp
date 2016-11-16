@@ -18,6 +18,7 @@
   <script type="js/jquery-1.10.2.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
+  <script type="text/javascript" src="banner_images/swfobject.js"></script>  
   
 </head>
 <body>
@@ -45,7 +46,18 @@
 			</div>
 		</div></td>
 	</tr>
-</tbody></table>   
+</tbody></table>
+
+<div align="center">  
+    <div id="flashcontent">  
+        <script type="text/javascript">  
+            var so = new SWFObject("banner_images/banner.swf", "mymovie", "816", "220", "8");  
+            so.addParam("menu", "false");  
+            so.write("flashcontent");  
+        </script>  
+    </div>  
+</div>  
+   
        <div id="wrapper">
         <div class="container">
             <div class="row">

@@ -103,7 +103,7 @@
                                 <td>Ngô Thừa Ân</td>
                                 <td>Nguyễn Minh Đạo</td>
                                 <td>Chờ duyệt hủy</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/phat-trien-ung-dung-da-nen-tang-cho-dien-thoai-di-dong-201609111473584798.html" class="btn btn-success btn-xs">Chi tiết</a></td>
+                                                                        <td><a "target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/phat-trien-ung-dung-da-nen-tang-cho-dien-thoai-di-dong-201609111473584798.html" class="btn btn-success btn-xs">Chi tiết</a></td>
                                                                     </tr>
                                                     <tr>
                                 <td><span class="text-info">3</span></td>

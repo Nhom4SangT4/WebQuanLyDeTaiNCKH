@@ -15,6 +15,9 @@
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="js/jquery-1.10.2.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
@@ -63,7 +66,7 @@
 		<a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
 		<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý đề tài của tôi</a>
 		<a href="ThongKe.jsp" class="list-group-item "><span class="pull-right"></span>Thống Kê</a>
-		<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
+		<a href="GV_QuanLyDeTaiDuocPhanCong.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
 		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
     </div>
                     </div>
@@ -72,13 +75,12 @@
                     <ol class="breadcrumb">
   <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>
   
-<div class="container">
-    <div class="row">    
-        <div class="col-xs-8 col-xs-offset-2">
+  
+  <div class="col-xs-8 col-xs-offset-2">
 		    <div class="input-group">
                 <div class="input-group-btn search-panel">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    	<span id="search_concept">Filter by</span> <span class="caret"></span>
+                    	<span id="search_concept">Lọc theo</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href="#">Mã đề tài</a></li>
@@ -89,13 +91,18 @@
                       <li><a href="#">Anything</a></li>
                     </ul>
                 </div>
-                <input type="hidden" name="search_param" value="all" id="search_param">         
+                <input type="hidden" name="search_param" value="all" id="search_param" class="">         
                 <input type="text" class="form-control" name="x" placeholder="Search term...">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
+                	<button type="button" class="btn btn-info">
+                		<span class="glyphicon glyphicon-search"></span>
+                	</button>
+                	</span>
             </div>
         </div>
+<div class="container">
+    <div class="row">    
+
 	</div>
 </div>
 

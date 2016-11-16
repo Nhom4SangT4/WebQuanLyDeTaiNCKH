@@ -82,55 +82,50 @@
 <div class="body">
 	<center><h1>Đăng Ký Đề Tài Sinh Viên</h1></center>
 <form id="contactform" name="contact" action="dangkydetaiServlet" method="post">
-  <p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p>
+  <center><p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p></center>
   <table border="0" cellpadding="0" cellspacing="0">
-  <div class="row">
-    <lable for="name">Họ Tên: <span class="req">*</span></lable>
-    <input type="text" name="txtname" id="txtname" class="txt" tabindex="1" placeholder="Họ và tên" required>
-  </div>
+<tr class="table">
+    <td class="left"><p>Họ tên </p></td>
+    <td class="right"><p><input type="text" name="txtname" id="txtname" class="txt" tabindex="1" placeholder="Họ và tên" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>MSSV </p></td>
+    <td class="right"><p><input type="text" name="txtmssv" id="txtmssv" class="txt" tabindex="2" placeholder="Mã số sinh viên" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Khoa </p></td>
+    <td class="right"><p><input type="text" name="txtkhoa" id="txtkhoa" class="txt" tabindex="3" placeholder="Khoa" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Tên đề tài </p></td>
+    <td class="right"><p><input type="text" name="txttendetai" id="txttendetai" class="txt" tabindex="4" placeholder="Tên đề tài" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Lĩnh vực </p></td>
+    <td class="right"><p><input type="text" name="txtlinhvuc" id="txtlinhvuc" class="txt" tabindex="5" placeholder="Linh vực" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Thời gian bắt đầu </p></td>
+    <td class="right"><p><input type="text" name="txtthoigianbatdau" id="txtthoigianbatdau" class="txt" tabindex="6" placeholder="Thời gian bắt đầu" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Thời gian kết thúc </p></td>
+    <td class="right"><p><input type="text" name="txtthoigianketthuc" id="txtthoigianketthuc" class="txt" tabindex="7" placeholder="Thời gian hoàn thành dự kiến" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Kinh phí dự kiến </p></td>
+    <td class="right"><p><input type="text" name="txtkinhphi" id="txtkinhphi" class="txt" tabindex="8" placeholder="Kinh phí dự kiến" required></p></td>
+</tr>
+<tr class="table">
+    <td class="left"><p>Ghi chú </p></td>
+    <td class="right"><p><textarea name="ghichu" id="ghichu" class="txtarea" tabindex="9" required></textarea></p></td>
+</tr>
+<tr>
+<td colspan="2">
+  <center><input type="submit" id="submitbtn" name="button" class="btn btn-success" tabindex="10" value="Đăng Ký"></center>
+</td>
+</tr>
    
-  <div class="row">
-    <label for="MSSV">MSSV: <span class="req">*</span></label>
-    <input type="text" name="txtmssv" id="txtmssv" class="txt" tabindex="2" placeholder="Mã số sinh viên" required>
-  </div>
-   
-   <div class="row">
-    <label for="Khoa">Khoa: <span class="req">*</span></label>
-    <input type="text" name="txtkhoa" id="txtkhoa" class="txt" tabindex="3" placeholder="Khoa" required>
-  </div>
-   
-   <div class="row">
-    <label for="tenDT">Tên Đề Tài: <span class="req">*</span></label>
-    <input type="text" name="txttendt" id="txttendt" class="txt" tabindex="4" placeholder="Tên đề tài" required>
-  </div>
-   
-  <div class="row">
-    <label for="LinhVuc">Lĩnh Vực: <span class="req">*</span></label>
-    <input type="text" name="txtlinhvuc" id="txtlinhvuc" class="txt" tabindex="5" placeholder="Linh vực" required>
-  </div>
-  
-  <div class="row">
-    <label for="ThoiGian">Thời Gian Bắt Đầu: <span class="req">*</span></label>
-    <input type="text" name="txtthoigian" id="txtthoigian" class="txt" tabindex="6" placeholder="Thời gian nghiên cứu" required>
-  </div>
-  <div class="row">
-    <label for="ThoiGian">Thời Gian Kết Thúc: <span class="req">*</span></label>
-    <input type="text" name="txtthoigian" id="txtthoigian" class="txt" tabindex="6" placeholder="Thời gian hoàn thành nghiên cứu" required>
-  </div>
-   
-   <div class="row">
-    <label for="KinhPhi">Kinh Phí: <span class="req">*</span></label>
-    <input type="text" name="txtkinhphi" id="txtkinhphi" class="txt" tabindex="7" placeholder="Kinh phí dự kiến" required>
-  </div>
-   
-  <div class="row">
-    <label for="message">Ghi Chú: <span class="req"></span></label>
-    <textarea name="ghichu" id="ghichu" class="txtarea" tabindex="8" required></textarea>
-  </div>
-   
-  <div class="center">
-    <input type="submit" id="submitbtn" name="button" tabindex="9" value="Đăng Ký">
-    </div>
     </table>
 </form>
 </div>

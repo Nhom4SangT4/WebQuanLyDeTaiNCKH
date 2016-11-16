@@ -84,7 +84,7 @@
 		    <div class="col-sm-offset-3 col-sm-6">
 		    </div>
 		    <div class="col-sm-0">
-		      <button type="submit" class="btn btn-default">Đăng nhập</button>
+		      <button type="submit" class="btn btn-primary">Đăng nhập</button>
 		    </div>
 		  </div>		  
 		</form>

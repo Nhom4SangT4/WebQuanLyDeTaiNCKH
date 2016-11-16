@@ -43,13 +43,14 @@ public class dangkydetaiServlet extends HttpServlet {
 	    String hoten = request.getParameter("txtname");    
 	    String mssv = request.getParameter("txtmssv");
 	    String khoa = request.getParameter("txtkhoa");
-	    String tendetai = request.getParameter("txttendt");
+	    String tendetai = request.getParameter("txttendetai");
 	    String linhvuc = request.getParameter("txtlinhvuc");
-	    String thoigian = request.getParameter("txtthoigian");
+	    String thoigianbatdau = request.getParameter("txtthoigianbatdau");
+	    String thoigianketthuc = request.getParameter("txtthoigianketthuc");
 	    String kinhphi = request.getParameter("txtkinhphi");
 	    String ghichu = request.getParameter("ghichu");
 	    try{
-	    	if(DAO.DangKyDeTai(hoten, mssv, khoa, tendetai, linhvuc, thoigian, kinhphi, ghichu)>0){ 
+	    	if(DAO.DangKyDeTai(hoten, mssv, khoa, tendetai, linhvuc, thoigianbatdau, thoigianketthuc, kinhphi, ghichu)>0){ 
 	    		out.print("<script>");
 	    		out.print("alert(\"Đăng Ký Thành Công!!!\");");  
 	    		out.print("</script>");

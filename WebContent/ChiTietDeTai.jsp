@@ -112,8 +112,8 @@
             <td>
                         </td>   
        
-           <td> <input type="button" value="Quay Về" class="button" onclick="location.href="HomeDuyetDT.jsp"> </td>
-		    <td> <input type="button" value="Duyệt" class="button" onclick="location.href=".jsp"> </td>
+           <td> <input type="button" value="Quay Về" class="btn btn-default" onclick="location.href="HomeDuyetDT.jsp"> </td>
+		   <td> <input type="button" value="Duyệt" class="btn btn-success" onclick="location.href=".jsp"> </td>
 		   
 
 			
