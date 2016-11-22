@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-
-
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,6 +22,15 @@
   
 </head>
 <body>
+	<% 
+            Connection connection = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+            Statement statement = connection.createStatement() ;
+            ResultSet resultset = 
+            statement.executeQuery("select tendetai, linhvuc from dangkydetai") ; 
+     %>
+
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
@@ -67,58 +76,20 @@
                         <div class="panel-body">
                             <div id="detail">
     <table class="table table-hover">
-        <tr>
-            <td>Tên đề tài</td>
-            <td>Xây dựng ứng dụng di động bằng React Native</td>
-        </tr>
-        <tr>     
-            <td>Mục tiêu</td>
-            <td></td>
-        </tr>
         <tr>   
-            <td>Yêu cầu</td>
-            <td></td>
+            <td>Tên đề tài </td>
         </tr> 
         <tr>       
-            <td>Sản phẩm</td>
-            <td>Tài liệu báo cáo, chương trình minh họa</td>
+            <td>Lĩnh vực </td>
         </tr> 
-        <tr>     
-            <td>Chú thích</td>
-            <td></td>
-        </tr>   
-        <tr>     
-            <td>Lĩnh vực</td>
-            <td>Phần Mềm</td>
-        </tr>   
-        
-        <tr>     
-            <td>Thời gian thực hiện</td>
-            <td>2015</td>
-        </tr>   
-        <tr>       
-            <td>Trưởng nhóm</td>
-            <td>Nguyễn Văn A</td>
-        </tr> 
-        <tr>        
-            <td>Thành viên</td>
-            <td>Trần Thị B</td>
-        </tr>
-        <tr>  
-            <td>GV hướng dẫn </td>
-            <td>Nguyễn Trần Thi Văn</td>
-        </tr>    
-        <tr class="warning">       
-            
-            <td>
-                        </td>   
-       
-           <td> <input type="button" value="Quay Về" class="btn btn-default" onclick="location.href="HomeDuyetDT.jsp"> </td>
-		   <td> <input type="button" value="Duyệt" class="btn btn-success" onclick="location.href=".jsp"> </td>
-		   
-
-			
-        </tr>
+		<% while(resultset.next()){ %>
+			<tr>
+				<Td> <%= resultset.getString(1) %></Td> 
+			</tr>
+			<tr>
+				<Td> <%= resultset.getString(2) %></Td>
+			</tr>
+		<% } %>
     </table>
 </div>
 </div> 

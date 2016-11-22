@@ -106,7 +106,7 @@
 </tr>
 <tr class="table">
     <td class="left"><p>Thời gian bắt đầu </p></td>
-    <td class="right"><p><input type="text" name="txtthoigianbatdau" id="txtthoigianbatdau" class="txt" tabindex="6" placeholder="Thời gian bắt đầu" required></p></td>
+    <td class="right"><p><input type="date" name="txtthoigianbatdau" max="2016-11-31" id="txtthoigianbatdau" class="txt" tabindex="6" placeholder="Thời gian bắt đầu" required></p></td>
 </tr>
 <tr class="table">
     <td class="left"><p>Thời gian kết thúc </p></td>
