@@ -18,14 +18,16 @@ pageEncoding="utf-8"%>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
 
-  <script type="js/jquery-3.1.1.min.js"></script>
-  <script type="js/bootstrap.min.js"></script>
-  <script type="js/footable.js"></script>
-  <script type="js/my_script.js"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/footable.js"></script>
+  <script type="text/javascript" src="js/my_script.js"></script>
 
   <link media="all" type="text/css" href="CSS/jquery-ui.min.css" rel="stylesheet" />
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/jquery.ui.datepicker-vi-VN.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+  bootstrap-datepicker.js
   <script>
   $("#tungay").datepicker({
     dateFormat : "dd/mm/yy",
@@ -174,7 +176,7 @@ pageEncoding="utf-8"%>
                     </div>
 
                     <div class="form-group">
-                      <input class="form-control" value="{SEARCH.tungay}" type="text" id="tungay" name="tungay" readonly="readonly" placeholder="{LANG.tungay}" /> <span class="input-group-btn">
+                      <input class="form-control" type="text" id="tungay" name="tungay" readonly="readonly" /> <span class="input-group-btn">
                       <button class="btn btn-default" type="button" id="tungay-btn">
                         <em class="fa fa-calendar fa-fix">&nbsp;</em>
                       </button>
