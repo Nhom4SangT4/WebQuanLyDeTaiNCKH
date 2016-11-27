@@ -62,7 +62,7 @@
 		<a href="ThongTinCaNhanSV.jsp" class="list-group-item"><span class="pull-right"></span>Thông Tin Cá Nhân</a>
 		<a href="DangKyDeTai.jsp" class="list-group-item active"><span class="pull-right"></span>Đăng kí Đề Tài</a>
 		<a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
-		<a href="HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Hủy Đề Tài</a>            
+		<a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia Hạn-Hủy Đề Tài</a>            
     	<a href="NopBaoCao.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>
     </div>
                     </div>
@@ -106,11 +106,11 @@
 </tr>
 <tr class="table">
     <td class="left"><p>Thời gian bắt đầu </p></td>
-    <td class="right"><p><input type="date" name="txtthoigianbatdau" max="2016-11-31" id="txtthoigianbatdau" class="txt" tabindex="6" placeholder="Thời gian bắt đầu" required></p></td>
+    <td class="right"><p><input type="date" name="txtthoigianbatdau" min="2000-01-01" id="txtthoigianbatdau" class="txt" tabindex="6" placeholder="Thời gian bắt đầu" required></p></td>
 </tr>
 <tr class="table">
     <td class="left"><p>Thời gian kết thúc </p></td>
-    <td class="right"><p><input type="text" name="txtthoigianketthuc" id="txtthoigianketthuc" class="txt" tabindex="7" placeholder="Thời gian hoàn thành dự kiến" required></p></td>
+    <td class="right"><p><input type="date" name="txtthoigianketthuc" min="2000-01-01"id="txtthoigianketthuc" class="txt" tabindex="7" placeholder="Thời gian hoàn thành dự kiến" required></p></td>
 </tr>
 <tr class="table">
     <td class="left"><p>Kinh phí dự kiến </p></td>

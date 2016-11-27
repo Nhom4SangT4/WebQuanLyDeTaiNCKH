@@ -60,7 +60,7 @@
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
        	<a href="HomeSinhVien.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
-		<a href="ThongTinCaNhan.jsp" class="list-group-item "><span class="pull-right"></span>Thông Tin Cá Nhân</a>
+		<a href="ThongTinCaNhanSV.jsp" class="list-group-item "><span class="pull-right"></span>Thông Tin Cá Nhân</a>
 		<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
 		<a href="TinhTrangDeTai.jsp" class="list-group-item  active"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
 		<a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia Hạn - Hủy Đề Tài</a>
