@@ -15,7 +15,16 @@ pageEncoding="utf-8"%>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
+
+  <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"><script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+  <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
   <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/bootstrap.min.js"></script>
   <script type="js/footable.js"></script>
@@ -157,67 +166,55 @@ pageEncoding="utf-8"%>
                       </select>
                     </div>
 
-                    <div class="form-inline">
-                      <lable for="optngaysinh" class="control-lable">Ngày sinh </lable>
-                      <div class="form-group col-sm-10">
-                        <div class='input-group date' id='datetimepicker8'>
-                          <input type='text' class="form-control" />
-                          <span class="input-group-addon">
-                            <span class="fa fa-calendar">
-                            </span>
-                          </span>
-                        </div>
+                    <div class="container">
+                      <label>Chọn ngày: </label>
+                      <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" type="text" readonly=""> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span> 
                       </div>
-                    </div>
-                    <script type="text/javascript">
-                    $(function () {
-                      $('#datetimepicker8').datetimepicker({
-                        icons: {
-                          time: "fa fa-clock-o",
-                          date: "fa fa-calendar",
-                          up: "fa fa-arrow-up",
-                          down: "fa fa-arrow-down"
-                        }
+                      <script type="text/javascript">
+                      $(function () {  
+                        $("#datepicker").datepicker({         
+                          autoclose: true,         
+                          todayHighlight: true 
+                        }).datepicker('update', new Date());
+                        $('.open-datetimepicker').click(function(event){
+                          event.preventDefault();
+                          $('#datetimepicker').click();
+                        });
                       });
-                    });
-                    </script>
-                  </div>
+                      </script>
+                    </div>
 
-                  <div class="form-group">
-                    <a href="#" class="btn btn-success btn-lg">
-                      <span class="glyphicon glyphicon-print"></span> Print 
-                    </a>
-                  </div>
 
-                  <div class="form-group">
-                    <lable for="txtghichu" class="control-lable">Ghi chú cá nhân </lable>
-                    <textarea type="text" rows="5" name="txtghichu" id="txtghichu" class="form-control" tabindex="3" placeholder="Ghi chú cá nhân" required> </textarea>
-                  </div>
 
-                  <div class="text-center">
-                    <input type="submit" id="submitbtn" name="button" class="btn btn-primary" value="Cập nhật">
-                    <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  value="Nhập lại">
-                  </div>
-                </div> 
-              </table>
-            </form>
-          </div>
-          <ol class="breadcrumb">
-            <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
+                    <div class="form-group">
+                      <lable for="txtghichu" class="control-lable">Ghi chú cá nhân </lable>
+                      <textarea type="text" rows="5" name="txtghichu" id="txtghichu" class="form-control" tabindex="3" placeholder="Ghi chú cá nhân" required> </textarea>
+                    </div>
+
+                    <div class="text-center">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" value="Cập nhật">
+                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  value="Nhập lại">
+                    </div>
+                  </div> 
+                </table>
+              </form>
+            </div>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div id="footer">
-          <hr />
-          <h5 class="text-center text-danger">Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh</h5>
-          <h5 class="text-center text-danger">Số 1, Võ Văn Ngân, Thủ Đức, TP. Hồ Chí Minh</h5>
+        <div class="container">
+          <div id="footer">
+            <hr />
+            <h5 class="text-center text-danger">Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh</h5>
+            <h5 class="text-center text-danger">Số 1, Võ Văn Ngân, Thủ Đức, TP. Hồ Chí Minh</h5>
+          </div>
         </div>
+      </div><!-- End #container -->
+      <div id="loading">
+        <span>Đang tải ...</span>
       </div>
-    </div><!-- End #container -->
-    <div id="loading">
-      <span>Đang tải ...</span>
-    </div>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  </body>
-  </html>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </body>
+    </html>
