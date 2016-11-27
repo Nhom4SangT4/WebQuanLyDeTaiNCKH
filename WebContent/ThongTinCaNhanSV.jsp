@@ -15,7 +15,7 @@ pageEncoding="utf-8"%>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
-  <script type="js/jquery-1.10.2.min.js"></script>
+  <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
   
@@ -131,7 +131,7 @@ pageEncoding="utf-8"%>
                       </label>
                     </div>
 
-                    <div class="form-inline">
+                    <div class="form-group">
                       <lable for="optdiachi" class="control-lable">Địa chỉ</lable>
                       <select class="form-control">
                         <option value="CanTho">TP.HCM</option>
@@ -155,62 +155,61 @@ pageEncoding="utf-8"%>
                       </select>
                     </div>
 
-                    <div class="container">
-                      <div class="row">
-                        <div class='col-sm-6'>
-                          <div class="form-group">
-                            <div class='input-group date' id='datetimepicker5'>
-                              <input type='text' class="form-control" />
-                              <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                              </span>
-                            </div>
-                          </div>
+                    <div class="form-inline">
+                      <lable for="optngaysinh" class="control-lable">Ngày sinh </lable>
+                      <div class="form-group col-sm-10">
+                        <div class='input-group date' id='datetimepicker8'>
+                          <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                            <span class="fa fa-calendar">
+                            </span>
+                          </span>
                         </div>
-                        <script type="text/javascript">
-                        $(function () {
-                          $('#datetimepicker5').datetimepicker({
-                            defaultDate: "11/1/2013",
-                            disabledDates: [
-                            moment("12/25/2013"),
-                            new Date(2013, 11 - 1, 21),
-                            "11/22/2013 00:53"
-                            ]
-                          });
-                        });
-                        </script>
                       </div>
                     </div>
+                    <script type="text/javascript">
+                    $(function () {
+                      $('#datetimepicker8').datetimepicker({
+                        icons: {
+                          time: "fa fa-clock-o",
+                          date: "fa fa-calendar",
+                          up: "fa fa-arrow-up",
+                          down: "fa fa-arrow-down"
+                        }
+                      });
+                    });
+                    </script>
+                  </div>
 
-                    <div class="form-group">
-                      <lable for="txtghichu" class="control-lable">Ghi chú cá nhân </lable>
-                      <textarea type="text" rows="5" name="txtghichu" id="txtghichu" class="form-control" tabindex="3" placeholder="Ghi chú cá nhân" required> </textarea>
-                    </div>
+                  <div class="form-group">
+                    <lable for="txtghichu" class="control-lable">Ghi chú cá nhân </lable>
+                    <textarea type="text" rows="5" name="txtghichu" id="txtghichu" class="form-control" tabindex="3" placeholder="Ghi chú cá nhân" required> </textarea>
+                  </div>
 
-                    <div class="text-center">
-                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" value="Nộp báo cáo">
-                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  value="Nhập lại">
-                    </div>
-                  </div> 
-                </table>
-              </form>
-            </div>
-            <ol class="breadcrumb">
-              <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
-            </div>
+                  <div class="text-center">
+                    <input type="submit" id="submitbtn" name="button" class="btn btn-primary" value="Cập nhật">
+                    <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  value="Nhập lại">
+                  </div>
+                </div> 
+              </table>
+            </form>
+          </div>
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
           </div>
         </div>
-        <div class="container">
-          <div id="footer">
-            <hr />
-            <h5 class="text-center text-danger">Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh</h5>
-            <h5 class="text-center text-danger">Số 1, Võ Văn Ngân, Thủ Đức, TP. Hồ Chí Minh</h5>
-          </div>
-        </div>
-      </div><!-- End #container -->
-      <div id="loading">
-        <span>Đang tải ...</span>
       </div>
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    </body>
-    </html>
+      <div class="container">
+        <div id="footer">
+          <hr />
+          <h5 class="text-center text-danger">Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh</h5>
+          <h5 class="text-center text-danger">Số 1, Võ Văn Ngân, Thủ Đức, TP. Hồ Chí Minh</h5>
+        </div>
+      </div>
+    </div><!-- End #container -->
+    <div id="loading">
+      <span>Đang tải ...</span>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </body>
+  </html>

@@ -13,7 +13,7 @@ pageEncoding="utf-8"%>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
-  <script type="js/jquery-1.10.2.min.js"></script>
+  <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
   
