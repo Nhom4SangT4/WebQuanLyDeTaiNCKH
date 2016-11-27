@@ -10,12 +10,14 @@ pageEncoding="utf-8"%>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>::. Home .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
   <script type="js/jquery-3.1.1.min.js"></script>
+  <script type="js/bootstrap.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
   
@@ -179,6 +181,12 @@ pageEncoding="utf-8"%>
                       });
                     });
                     </script>
+                  </div>
+
+                  <div class="form-group">
+                    <a href="#" class="btn btn-success btn-lg">
+                      <span class="glyphicon glyphicon-print"></span> Print 
+                    </a>
                   </div>
 
                   <div class="form-group">
