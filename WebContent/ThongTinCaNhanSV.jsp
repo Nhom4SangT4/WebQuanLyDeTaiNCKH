@@ -23,9 +23,9 @@ pageEncoding="utf-8"%>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
 
-  <link type="text/css" href="/{NV_ASSETS_DIR}/js/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
-  <script type="text/javascript" src="/{NV_ASSETS_DIR}/js/jquery-ui/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/{NV_ASSETS_DIR}/js/language/jquery.ui.datepicker-{NV_LANG_INTERFACE}.js"></script>
+  <link media="all" type="text/css" href="CSS/jquery-ui.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.datepicker-vi-VN.js"></script>
   <script>
   $("#tungay").datepicker({
     dateFormat : "dd/mm/yy",
