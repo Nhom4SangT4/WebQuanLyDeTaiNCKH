@@ -27,63 +27,63 @@ pageEncoding="utf-8"%>
   <script type="text/javascript" src="js/my_script.js"></script>
   <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
   --%>
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.css"/>
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap-datepicker.css" >
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href="./css/prettify-1.0.css" rel="stylesheet">
-  <link href="./css/base.css" rel="stylesheet">
-  <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/footable.js"></script>
+  <script type="text/javascript" src="js/my_script.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-            <![endif]-->
-            <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-            <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript">
+  $(function () {
+    $(".date-picker").datepicker();
+  });
 
-            <script type="text/javascript">
-            $(function () {
-              $(".date-picker").datepicker();
-            });
+  $(".date-picker").on("change", function () {
+    var id = $(this).attr("id");
+    var val = $("label[for='" + id + "']").text();
+    $("#msg").text(val + " changed");
+  });
+  </script>
 
-            $(".date-picker").on("change", function () {
-              var id = $(this).attr("id");
-              var val = $("label[for='" + id + "']").text();
-              $("#msg").text(val + " changed");
-            });
-            </script>
-
-          </head>
-          <body>
-            <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
-             <tbody><tr>
-              <td colspan="2"><div id="pnTop">
-               <div id="pnTopDisplay" style="width:1000px;float:left;
-               ">
-               <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
-                 <div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
-                 </div>
-
-               </div><div>
-               <div class="sup_menu">
-                <ul>
-
-                 <li><a href="DangNhap.jsp">Đăng Xuất</a></li>
-               </ul>
-             </div>
-           </div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
-           <marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
-           </span></marquee>
-
-         </div></div>
+</head>
+<body>
+  <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+   <tbody><tr>
+    <td colspan="2"><div id="pnTop">
+     <div id="pnTopDisplay" style="width:1000px;float:left;
+     ">
+     <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
+       <div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
        </div>
-     </div></td>
-   </tr>
- </tbody></table>   
- <div id="wrapper">
+
+     </div><div>
+     <div class="sup_menu">
+      <ul>
+
+       <li><a href="DangNhap.jsp">Đăng Xuất</a></li>
+     </ul>
+   </div>
+ </div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+ <marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
+ </span></marquee>
+
+</div></div>
+</div>
+</div></td>
+</tr>
+</tbody></table>   
+<div id="wrapper">
   <div class="container">
     <div class="row">
       <div id="left-content">
@@ -193,25 +193,19 @@ pageEncoding="utf-8"%>
                     </div>
 
 
-                    <div class="date-form">
+                    <div class="form-group">
                       <div class="form-horizontal">
 
                         <div class="control-group">
                           <label for="date-picker" class="control-label">Ngày sinh</label>
                           <div class="controls">
                             <div class="input-group">
-                              <input id="date-picker" type="text" class="date-picker form-control" />
+                              <input id="date-picker" type="text" class="date-picker form-control" placeholder="mm/dd/yyyy"/>
                               <label for="date-picker" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
                               </label>
                             </div>
                           </div>
                         </div>
-
-                      </div>
-
-                      <hr />
-                      <div>
-                        <span id="msg" class="controls form-control uneditable-input"></span>
                       </div>
                     </div>
 
