@@ -25,24 +25,24 @@ pageEncoding="utf-8"%>
 </head>
 <body>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
-       <tbody><tr>
-          <td colspan="2"><div id="pnTop">
-             <div id="pnTopDisplay" style="width:1000px;float:left;
-             ">
-             <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
-               <div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
-               </div>
+     <tbody><tr>
+      <td colspan="2"><div id="pnTop">
+       <div id="pnTopDisplay" style="width:1000px;float:left;
+       ">
+       <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
+         <div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
+         </div>
 
-           </div><div>
-           <div class="sup_menu">
-            <ul>
+     </div><div>
+     <div class="sup_menu">
+        <ul>
 
-             <li><a href="DangNhap.jsp">Đăng Xuất</a></li>
-         </ul>
-     </div>
- </div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
- <marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
- </span></marquee>
+           <li><a href="DangNhap.jsp">Đăng Xuất</a></li>
+       </ul>
+   </div>
+</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
+</span></marquee>
 
 </div></div>
 </div>
@@ -92,11 +92,11 @@ pageEncoding="utf-8"%>
                         </div>
                     </div>
                     <script>
-                    $(document).ready(function() {
-                        var activeSystemClass = $('.list-group-item.active');
+                        $(document).ready(function() {
+                            var activeSystemClass = $('.list-group-item.active');
     //something is entered in search form
     $('#system-search').keyup( function() {
-       var that = this;
+     var that = this;
         // affect all table rows on in systems table
         var tableBody = $('.table-list-search tbody');
         var tableRowsClass = $('.table-list-search tbody tr');
@@ -147,15 +147,15 @@ pageEncoding="utf-8"%>
 
 
 <table class="table" data-page-size="5">
-   <thead>
-      <tr>
-        <th data="true">STT</th>
-        <th data="true">Mã đề tài</th>
-        <th data="true">Tên đề tài</th>
-        <th data="true" style="width: 140px!important;">GVHD</th>
-        <th data-hide="phone,tablet">Tình trạng </th>
-        <th data-hide="phone">Chi tiết</th>
-    </tr>
+ <thead>
+  <tr>
+    <th data="true">STT</th>
+    <th data="true">Mã đề tài</th>
+    <th data="true">Tên đề tài</th>
+    <th data="true" style="width: 140px!important;">GVHD</th>
+    <th data-hide="phone,tablet">Tình trạng </th>
+    <th data-hide="phone">Chi tiết</th>
+</tr>
 </thead>
 <tbody>
     <tr>
@@ -228,27 +228,27 @@ pageEncoding="utf-8"%>
 </tbody>
 <tfoot>
   <tr>
-     <td colspan="6">
-        <div class="pagination pagination-centered"><ul class="pagination"><li class="active"><a>1</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/2.html">2</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/3.html">3</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/10.html">&raquo;</a></li></ul></div>
-    </td>
+   <td colspan="6">
+    <div class="pagination pagination-centered"><ul class="pagination"><li class="active"><a>1</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/2.html">2</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/3.html">3</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/10.html">&raquo;</a></li></ul></div>
+</td>
 </tr>
 </tfoot>
 </table>
 </div>
 <script>
-$(document).ready(function(){
-    $("#hinh_thuc").change(function(){
+    $(document).ready(function(){
+        $("#hinh_thuc").change(function(){
         //document.location.href = $(this).val();
         alert($(this).val());
     });
-});
+    });
 </script>
 <script>
-$(document).ready(function(){
-    $("#lst_gv").change(function(){
-        var id_gv = $(this).val();
-        if (id_gv == 'all')
-        {
+    $(document).ready(function(){
+        $("#lst_gv").change(function(){
+            var id_gv = $(this).val();
+            if (id_gv == 'all')
+            {
             //return false;
             location.reload();
         }
@@ -274,12 +274,12 @@ $(document).ready(function(){
             return false;
         }
     });  
-});
-$(document).ajaxStart(function () {
-    $("#loading").show();
-}).ajaxStop(function () {
-    $("#loading").hide();
-});
+    });
+    $(document).ajaxStart(function () {
+        $("#loading").show();
+    }).ajaxStop(function () {
+        $("#loading").hide();
+    });
 </script>
 <div class="well-sm">
     <span>

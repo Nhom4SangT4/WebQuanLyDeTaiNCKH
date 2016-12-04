@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -29,19 +31,29 @@ pageEncoding="utf-8"%>
 
   <%--Lay ngay thang nam--%>
   <script type="text/javascript">
-  $(function () {
-    $(".date-picker").datepicker();
-  });
+    $(function () {
+      $(".date-picker").datepicker();
+    });
 
-  $(".date-picker").on("change", function () {
-    var id = $(this).attr("id");
-    var val = $("label[for='" + id + "']").text();
-    $("#msg").text(val + " changed");
-  });
+    $(".date-picker").on("change", function () {
+      var id = $(this).attr("id");
+      var val = $("label[for='" + id + "']").text();
+      $("#msg").text(val + " changed");
+    });
   </script>
 
 </head>
 <body>
+
+  <% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select hoten, mssv, khoa, email, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu from taikhoan") ; 
+  %>
+
   <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
    <tbody>
     <tr>
@@ -112,9 +124,10 @@ pageEncoding="utf-8"%>
               <form name="xuly" action="" method="post">
                 <table border="0" cellpadding="0" cellspacing="0">
                   <div class="panel-body">
+                  <% ResultSet rs (ResultSet) request.getAttribute("taikhoan");%>
                     <div class="form-group">
                       <lable for="txtname" class="control-lable"><strong>Họ tên </strong></lable>
-                      <input type="text" name="txtname" id="txtname" class="form-control" tabindex="1" placeholder="Họ và tên" required>
+                      <input value="<%=rs.getString("hoten")%>" type="text" name="txtname" id="txtname" class="form-control" tabindex="1" placeholder="Họ và tên" required>
                     </div>
 
                     <div class="form-group">
@@ -160,24 +173,24 @@ pageEncoding="utf-8"%>
                     <div class="form-group">
                       <lable for="optdiachi" class="control-lable">Địa chỉ</lable>
                       <select class="form-control">
-                        <option value="CanTho">TP.HCM</option>
-                        <option value="CanTho">Cần Thơ</option>
-                        <option value="DongThap">Đồng Tháp</option>
-                        <option value="SocTrang">Sóc Trăng</option>
-                        <option value="CanTho">Bình Định</option>
-                        <option value="DongThap">Cà Mau</option> 
-                        <option value="DongThap">Hà Nội</option>
-                        <option value="SocTrang">Nam Định</option>
-                        <option value="CanTho">Huế</option>
-                        <option value="DongThap">Đà Nẵng</option>
-                        <option value="SocTrang">Quảng Nam</option>
-                        <option value="CanTho">Bạc Liêu</option>
-                        <option value="DongThap">Đồng Nai</option>
-                        <option value="SocTrang">Bình Dương</option>
-                        <option value="SocTrang">Bình Phước</option>
-                        <option value="CanTho">Bình Thuận</option>
-                        <option value="DongThap">Ninh Thuận</option>
-                        <option value="SocTrang">Nghệ An</option>
+                        <option value="tphcm">TP.HCM</option>
+                        <option value="cantho">Cần Thơ</option>
+                        <option value="dongthap">Đồng Tháp</option>
+                        <option value="soctrang">Sóc Trăng</option>
+                        <option value="binhdinh">Bình Định</option>
+                        <option value="camau">Cà Mau</option> 
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="namdinh">Nam Định</option>
+                        <option value="hue">Huế</option>
+                        <option value="danang">Đà Nẵng</option>
+                        <option value="quangnam">Quảng Nam</option>
+                        <option value="baclieu">Bạc Liêu</option>
+                        <option value="dongnai">Đồng Nai</option>
+                        <option value="binhduong">Bình Dương</option>
+                        <option value="binhphuoc">Bình Phước</option>
+                        <option value="binhthuan">Bình Thuận</option>
+                        <option value="ninhthuan">Ninh Thuận</option>
+                        <option value="nghean">Nghệ An</option>
                       </select>
                     </div>
 

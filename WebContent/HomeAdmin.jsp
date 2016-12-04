@@ -60,11 +60,9 @@
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
 		
-       	<a href="Home.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
-		<a href="HomeAdmin.jsp" class="list-group-item  active"><span class="pull-right"></span>Thông Báo Mới</a>
-		
-		<a href="QuanLyTaiKhoanGV.jsp" class="list-group-item"><span class="pull-right"></span>Quản Lý Tài Khoản Giáo Viên</a>
-		<a href="QuanLyTaiKhoanSV.jsp" class="list-group-item"><span class="pull-right"></span>Quản Lý Tài Khoản Sinh Viên</a>
+       	<a href="HomeAdmin.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
+		<a href="HomeAdmin.jsp" class="list-group-item  active"><span class="pull-right"></span>Quản Lý Thông Báo</a>
+		<a href="PhanQuyenTaiKhoan.jsp" class="list-group-item"><span class="pull-right"></span>Quản Lý Tài Khoản</a>
 		
 		
 		
@@ -80,7 +78,7 @@
 			
 				
 				<tr >  <table cellspacing="0" cellpadding="0" border="1" style="border-collapse:collapse;">
-			<h4 color ="#6495ED " align= "center">Quản Lý Thông Báo Trang</h1>
+			<h4 color ="#6495ED " align= "center">Quản Lý Thông Báo</h1>
 
 				<tr align ="center" bgcolor="#6495ED" height="30px" cellspacing="10"  align="Cenleft" cellspacing="20"> 
 					<td width="3%" cellspacing="10" >  SST </td>
