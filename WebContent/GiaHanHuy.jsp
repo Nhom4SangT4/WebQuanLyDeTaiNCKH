@@ -61,7 +61,7 @@
        	<a href="HomeNghiemThu.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
 		<a href="QuanLyDeTai.jsp" class="list-group-item  "><span class="pull-right"></span>Quản Lý Đề Tài</a>
 		<a href="GiaHanHuy.jsp" class="list-group-item active"><span class="pull-right"></span>Gia hạn,Hủy</a>
-		<a href="NghiemThuDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Nghiệp Thu Đề Tài </a>       
+		<a href="NghiemThuDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Nghiệm Thu Đề Tài </a>       
     </div>
                     </div>
                 </div>

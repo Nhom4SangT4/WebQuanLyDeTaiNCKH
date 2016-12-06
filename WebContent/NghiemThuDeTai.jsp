@@ -4,9 +4,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>::. Nghiệm Thu Đề Tài .::</title>
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/styles.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>::. Home .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
@@ -16,29 +18,28 @@
   <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
- 
+  
 </head>
 <body>
-	<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+    <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
-			<div id="pnTopDisplay" style="width:1366px;float:left;
+			<div id="pnTopDisplay" style="width:1000px;float:left;
 ">
-				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:1100px;float:left;padding:15px 0px 0px 0px;">
-					<div class="logo_ute"><a href="#"><img alt="" src="skpt_banner_2.jpg" width="1000" height="150"></a><br>
+				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
+					<div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
 					</div>
 
 				</div><div>
 					<div class="sup_menu">
 				<ul>
+    
     			<li><a href="DangNhap.jsp">Đăng Xuất</a></li>
 				</ul>
 					</div>
-				<div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+				</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
 					<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
 </span></marquee>
-
-				</div></div>
 
 				</div></div>
 			</div>
@@ -61,7 +62,7 @@
        	<a href="HomeNghiemThu.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
 		<a href="QuanLyDeTai.jsp" class="list-group-item  "><span class="pull-right"></span>Quản Lý Đề Tài</a>
 		<a href="GiaHanHuy.jsp" class="list-group-item "><span class="pull-right"></span>Gia hạn,Hủy</a>
-		<a href="NghiemThuDeTai.jsp" class="list-group-item active "><span class="pull-right"></span>Nghiệp Thu Đề Tài </a>       
+		<a href="NghiemThuDeTai.jsp" class="list-group-item active "><span class="pull-right"></span>Nghiệm Thu Đề Tài </a>       
    
     </div>
                     </div>
@@ -100,17 +101,17 @@
 	<form id="contactform" name="contact" action="HomeNghiemThu.jsp" method="post">
   
    
-  <div class="row">
+  <div class="form-group">
     <label for="message">Comment: <span class="req"></span></label>
-    <textarea name="txtComment" id="txtComment" class="txtarea" tabindex="1" required></textarea>
+    <textarea type="text" row="5" class="form-control" name="txtComment" id="txtComment" class="txtarea" tabindex="1" required></textarea>
   </div>
-  <div class="row">
+  <div class="form-group">
     <label for="message">Comment của SV: <span class=""></span></label>
-    <textarea name="cmtcuaban" id="cmtcuaban" class="txtarea" tabindex="8" required></textarea>
+    <textarea type="text" row="5" class="form-control" name="cmtcuaban" id="cmtcuaban" class="txtarea" tabindex="8" required></textarea>
   </div>
    
-  <div class="center">
-    <input type="submit" id="submitbtn" name="button" tabindex="9" value="Xong">
+  <div class="text-center">
+    <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="9" value="Xong">
     </div>
 </form>
 			

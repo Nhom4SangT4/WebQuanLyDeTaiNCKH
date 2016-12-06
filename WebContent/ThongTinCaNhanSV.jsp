@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
-<%@ page import="java.sql.*" %>
-<% Class.forName("com.mysql.jdbc.Driver"); %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -44,46 +43,31 @@ pageEncoding="utf-8"%>
 
 </head>
 <body>
+    <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+	<tbody><tr>
+		<td colspan="2"><div id="pnTop">
+			<div id="pnTopDisplay" style="width:1000px;float:left;
+">
+				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
+					<div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
+					</div>
 
-  <% 
-  Connection connection = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+				</div><div>
+					<div class="sup_menu">
+				<ul>
+    
+    			<li><a href="DangNhap.jsp">Đăng Xuất</a></li>
+				</ul>
+					</div>
+				</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+					<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
+</span></marquee>
 
-  Statement statement = connection.createStatement() ;
-  ResultSet resultset = 
-  statement.executeQuery("select hoten, mssv, khoa, email, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu from taikhoan") ; 
-  %>
-
-  <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
-   <tbody>
-    <tr>
-      <td colspan="2">
-        <div id="pnTop">
-          <div id="pnTopDisplay" style="width:1000px;float:left;
-          ">
-          <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
-          </div>
-          <center><div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br></center>
-        </div>
-      </div>
-      <div class="sup_menu">
-        <ul>
-          <li><a href="DangNhap.jsp">Đăng Xuất</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left">
-      <div>
-        <marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
-        </span>
-      </marquee>
-    </div>
-  </div>
-</td>
-</tr>
-</tbody>
-</table>   
+				</div></div>
+			</div>
+		</div></td>
+	</tr>
+</tbody></table>   
 <div id="wrapper">
   <div class="container">
     <div class="row">
@@ -124,10 +108,9 @@ pageEncoding="utf-8"%>
               <form name="xuly" action="" method="post">
                 <table border="0" cellpadding="0" cellspacing="0">
                   <div class="panel-body">
-                  <% ResultSet rs (ResultSet) request.getAttribute("taikhoan");%>
                     <div class="form-group">
                       <lable for="txtname" class="control-lable"><strong>Họ tên </strong></lable>
-                      <input value="<%=rs.getString("hoten")%>" type="text" name="txtname" id="txtname" class="form-control" tabindex="1" placeholder="Họ và tên" required>
+                      <input  type="text" name="txtname" id="txtname" class="form-control" tabindex="1" placeholder="Họ và tên" required>
                     </div>
 
                     <div class="form-group">

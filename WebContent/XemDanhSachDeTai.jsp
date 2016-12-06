@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -21,6 +23,14 @@
   
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, tendetai, linhvuc, TrangThai from dangkydetai") ; 
+  %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
@@ -72,94 +82,21 @@
                     <ol class="breadcrumb">
   <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>
   <table class="table" data-page-size="5">
-    	<thead>
-    		<tr>
-                <th data="true">STT</th>
-                <th data="true" style="width: 80px">Mã đề tài</th>
-    			<th data="true" style="width: 200px">Tên đề tài</th>
-    			<th data="true">SVTH</th>
-    			<th data="true" style="width: 180px!important;">GVHD</th>
-    			<th data-hide="phone,tablet">Tình trạng </th>
-                <th data-hide="phone">Chi tiết</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-                                                    <tr>
-                                <td><span class="text-info">1</span></td>
-                                <td>IT001</td>
-                                <td>Xây dựng ứng dụng di động bằng React Native</td>
-                                <td>Đặng Ngọc Sơn</td>
-                                <td>Nguyễn Trần Thi Văn</td>
-                                <td>Chờ nghiệm thu</td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Chi tiết</button></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">2</span></td>
-                                <td>IT002</td>
-                                <td>Phát triển ứng dụng đa nền tảng cho điện thoại di động</td>
-                                <td>Ngô Thừa Ân</td>
-                                <td>Nguyễn Minh Đạo</td>
-                                <td>Chờ duyệt hủy</td>
-                                                                        <td><a "target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/phat-trien-ung-dung-da-nen-tang-cho-dien-thoai-di-dong-201609111473584798.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">3</span></td>
-                                <td>IT003</td>
-                                <td>Xây dựng ứng dụng quản lý công việc cho Android</td>
-                                <td>Hồ Quang Hiếu</td>
-                                <td>Nguyễn Trần Thi Văn</td>
-                                <td>Chờ phản biện</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/xay-dung-ung-dung-quan-ly-cong-viec-cho-android-201609111473584799.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">4</span></td>
-                                <td>IT004</td>
-                                <td>Lập trình Game cho điện thoại di động</td>
-                                <td>Trịnh Đình Quang</td>
-                                <td>Trương Thị Ngọc Phượng</td>
-                                <td>Chờ duyệt hướng dẫn</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/lap-trinh-game-cho-dien-thoai-di-dong-201609111473584800.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">5</span></td>
-                                <td>IT005</td>
-                                <td>Xây dựng ứng dụng hỗ trợ học từ vựng tiếng Anh theo chủ đề</td>
-                                <td>Nguyễn Ngọc Bảo My</td>
-                                <td>Mai Tuấn Khôi</td>
-                                <td>Chờ phản biện</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/xay-dung-ung-dung-ho-tro-hoc-tu-vung-tieng-anh-theo-chu-de-201609111473584801.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">6</span></td>
-                                <td>IT006</td>
-                                <td>Tìm hiểu kỹ thuật lập trình hệ thống cho Android</td>
-                                <td>Hứa Chử</td>
-                                <td>Nguyễn Trần Thi Văn</td>
-                                <td>Chờ nghiệm thu</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/tim-hieu-ky-thuat-lap-trinh-he-thong-cho-android-201609111473584802.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">7</span></td>
-                                <td>IT007</td>
-                                <td>Tìm hiểu cấu trúc mạng xã hội và xây dựng ứng dụng minh họa</td>
-                                <td>Bùi Anh Tuấn</td>
-                                <td>Nguyễn Trần Thi Văn</td>
-                                <td>Chờ duyệt hủy</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/tim-hieu-cau-truc-mang-xa-hoi-va-xay-dung-ung-dung-minh-hoa-201609111473584832.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">8</span></td>
-                                <td>IT006</td>
-                                <td>Xây dựng website tra cứu vé máy bay sử dụng Spring MVC framework</td>
-                                <td>Hoàng Gia Huy</td>
-                                <td>Lê Văn Vinh</td>
-                                <td>Chờ duyệt hướng dẫn</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/xay-dung-website-tra-cuu-ve-may-bay-su-dung-spring-mvc-framework-201609111473584823.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                            	</tbody>
+    		<TR align="center">
+              <th align="center" data-hide="phone"><u>Mã Đề Tài</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Lĩnh vực</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Trạng Thái</u></th>
+            </TR>
+    		<% while(resultset.next()){ %>
+            <TR>
+              <TD> <%= resultset.getString(1) %></td>
+                <TD> <%= resultset.getString(2) %></TD>
+                <TD> <%= resultset.getString(3) %></TD>
+                <TD> <%= resultset.getString(4) %></TD>
+                
+              </TR>
+              <% } %>
     	<tfoot>
     		<tr>
     			<td colspan="6">
@@ -169,52 +106,6 @@
     	</tfoot>
     </table>
 </div>
-<script>
-$(document).ready(function(){
-    $("#hinh_thuc").change(function(){
-        //document.location.href = $(this).val();
-        alert($(this).val());
-    });
-});
-</script>
-<script>
-$(document).ready(function(){
-    $("#lst_gv").change(function(){
-        var id_gv = $(this).val();
-        if (id_gv == 'all')
-        {
-            //return false;
-            location.reload();
-        }
-        else
-        {
-            var cauhinh_id = '44';
-            var cn_id = 'page'
-            //alert(cn_id);
-            var form_data_gv = {
-                gv_id: id_gv,
-                cauhinh_id: cauhinh_id,
-                cn_id : cn_id
-            };
-            $.ajax({
-                url:'http://dkdt.fit.hcmute.edu.vn/giang-vien-de-tai.html',
-                type:'POST',
-                cache:true,
-                data: form_data_gv,
-                success:function(msg_form_gv){
-                    $("#show_detai").html(msg_form_gv);
-                }
-                });
-                return false;
-        }
-    });  
-});
- $(document).ajaxStart(function () {
-        $("#loading").show();
-    }).ajaxStop(function () {
-        $("#loading").hide();
-    });
-</script>
   <div class="well-sm">
         <span>
             <span id="random_tin">
