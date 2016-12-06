@@ -1,11 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-<!doctype html>
-<html lang="en-US">
+pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>::. Đăng Ký Đề Tài .::</title>
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/styles.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>::. Home .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
@@ -15,10 +20,18 @@
   <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
- 
+  
 </head>
 <body>
-	<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select mssv, hoten, tendetai, linhvuc from dangkydetai where TrangThai='HUY'") ; 
+  %>
+    <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
 			<div id="pnTopDisplay" style="width:1000px;float:left;
@@ -36,7 +49,7 @@
 					</div>
 				</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
 					<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
-					</span></marquee>
+</span></marquee>
 
 				</div></div>
 			</div>
@@ -44,25 +57,23 @@
 	</tr>
 </tbody></table>   
        <div id="wrapper">
-        <div class="container">
-            <div class="row">
-                <div id="left-content">
-                    <div class="col-md-3">
-                        <!-- Menu desktop -->
-                        <div id="desktop-menu">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-        
-            <h4 id="mobile_home">Danh Mục</h4>   
+  <div class="container">
+    <div class="row">
+      <div id="left-content">
+        <div class="col-md-3">
+          <!-- Menu desktop -->
+          <div id="desktop-menu">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                
+                <h4 id="mobile_home">Danh Mục</h4>   
+              </div>
+              
+              <a href="ThongKe.jsp" class="list-group-item active"><span class="pull-right"></span>Thống Kê</a>
+              <a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
+            </div>
+          </div>
         </div>
-       	<a href="Home.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
-		<a href="DangKyDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Đăng Ký</a>
-		<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý</a>
-		<a href="ThongKe.jsp" class="list-group-item active"><span class="pull-right"></span>Thống Kê</a>
-		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
-    </div>
-                    </div>
-                </div>
                 <div class="col-md-9">
                     <ol class="breadcrumb">
   <li><a href="Home.jsp">Home</a></li><li><a href="ThongKe.jsp">Thống Kê</a></li><li class="active">Danh Sách Đề Tài Bị Loại</li></ol>    <div class="well-sm">
@@ -75,7 +86,7 @@
         </span>    
     </div>
                         <div id="w">
-	<h1>Danh Sách Đề Tài</h1>
+	<center><h1>Danh Sách Đề Tài Bị Hủy</h1></center>
 	<TABLE class="table table-hover" >
             <TR align="center">
 
@@ -85,7 +96,15 @@
                       <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Lĩnh Vực</u></th>
             </TR>
-
+			<% while(resultset.next()){ %>
+            <TR>
+              <TD> <%= resultset.getString(1) %></td>
+                <TD> <%= resultset.getString(2) %></TD>
+                <TD> <%= resultset.getString(3) %></TD>
+                <TD> <%= resultset.getString(4) %></TD>
+                
+              </TR>
+              <% } %>
         </TABLE>
 </div>
                     <ol class="breadcrumb">
