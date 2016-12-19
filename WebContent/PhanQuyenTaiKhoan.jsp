@@ -69,7 +69,6 @@
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
        	<a href="HomeAdmin.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
-       	<a href="#" class="list-group-item "><span class="pull-right"></span>Quản Lý Thông Báo</a>
        	<a href="PhanQuyenTaiKhoan.jsp" class="list-group-item active"><span class="pull-right"></span>Quản Lý Tài Khoản</a>       
     </div>
                     </div>

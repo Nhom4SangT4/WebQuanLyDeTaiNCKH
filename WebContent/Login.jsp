@@ -23,7 +23,7 @@
 			  out.print("alert(\"Đăng Nhập Thành Công!!!\");");  
 	    	  out.print("</script>");
 	    	  out.println("<script type=\"text/javascript\">");				
-			  out.println("location='HomeAdmin.jsp'");
+			  out.println("location='PhanQuyenTaiKhoan.jsp'");
 			  out.println("</script>");
 	    	  //RequestDispatcher rd=request.getRequestDispatcher("Home.jsp");    
 			   
@@ -72,8 +72,8 @@
 		out.print("alert('Tài khoản hoặc mật khẩu không chính xác!');");
 		out.print("</script>");
 		out.println("<script type=\"text/javascript\">");				
-		  out.println("location='DangNhap.jsp'");
-		 out.println("</script>");
+		out.println("location='DangNhap.jsp'");
+		out.println("</script>");
 	} %>
 </body>
 </html>
