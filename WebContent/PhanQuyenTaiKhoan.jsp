@@ -25,7 +25,7 @@
 <body>
 <% 
             Connection connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/qldtnckh", "root", "1234");
+                "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
 
             Statement statement = connection.createStatement() ;
             ResultSet resultset = 

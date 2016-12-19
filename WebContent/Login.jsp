@@ -10,7 +10,7 @@
 	  String id = request.getParameter("txtid");
 	  String pass = request.getParameter("txtpass");
 	  int x=1;
-	  Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qldtnckh","root","1234");
+	  Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/qldtnckh","root","123456");
 	  Statement sta = conn.createStatement();
 	  String query = "SELECT * FROM taikhoan where tentaikhoan = '"+id+"' and matkhau= '"+pass+"'";
 	  ResultSet quyen = sta.executeQuery(query);
