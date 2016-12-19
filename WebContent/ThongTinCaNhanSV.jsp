@@ -1,72 +1,50 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>  
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>::. Home .::</title>
-
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.css" />
+  <title>::. Thông tin cá nhân .::</title>
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
-  <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap-datepicker.css" >
-
-  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/footable.js"></script>
-  <script type="text/javascript" src="js/my_script.js"></script>
-  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-
-  <%--Lay ngay thang nam--%>
-  <script type="text/javascript">
-    $(function () {
-      $(".date-picker").datepicker();
-    });
-
-    $(".date-picker").on("change", function () {
-      var id = $(this).attr("id");
-      var val = $("label[for='" + id + "']").text();
-      $("#msg").text(val + " changed");
-    });
-  </script>
-
+  <script type="js/jquery-3.1.1.min.js"></script>
+  <script type="js/footable.js"></script>
+  <script type="js/my_script.js"></script>
+  
 </head>
 <body>
-    <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
-	<tbody><tr>
-		<td colspan="2"><div id="pnTop">
-			<div id="pnTopDisplay" style="width:1000px;float:left;
-">
-				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
-					<div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
-					</div>
+  <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+   <tbody><tr>
 
-				</div><div>
-					<div class="sup_menu">
-				<ul>
-    
-    			<li><a href="DangNhap.jsp">Đăng Xuất</a></li>
-				</ul>
-					</div>
-				</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
-					<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
-</span></marquee>
+    <td colspan="2"><div id="pnTop">
+     <div id="pnTopDisplay" style="width:1000px;float:left;
+     ">
+     <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
+       <div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
+       </div>
 
-				</div></div>
-			</div>
-		</div></td>
-	</tr>
+     </div><div>
+     <div class="sup_menu">
+      <ul>
+
+       <li><a href="DangNhap.jsp">Đăng Xuất</a></li>
+     </ul>
+   </div>
+ </div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+ <marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
+ </span></marquee>
+
+</div></div>
+</div>
+</div></td>
+</tr>
 </tbody></table>   
 <div id="wrapper">
   <div class="container">
@@ -80,18 +58,18 @@ pageEncoding="utf-8"%>
 
                 <h4 id="mobile_home">Danh Mục</h4>   
               </div>
-              <a href="HomeSinhVien.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
-              <a href="ThongTinCaNhanSV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông Tin Cá Nhân</a>
-              <a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
-              <a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
-              <a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia hạn-hủy Đề Tài</a>            
-              <a href="NopBaoCaoSV.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>
+              	<a href="HomeSinhVien.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
+              	<a href="ThongTinCaNhanSV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông Tin Cá Nhân</a>
+              	<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
+              	<a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
+              	<a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia hạn-hủy Đề Tài</a>            
+              	<a href="NopBaoCaoSV.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>
             </div>
           </div>
         </div>
         <div class="col-md-9">
           <ol class="breadcrumb">
-            <li><a href="#">Home</a></li><li class="active">Thông tin sinh viên</li></ol>    <div class="well-sm">
+            <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>    <div class="well-sm">
             <span>
               <span id="random_tin">
                 <i class="icon-bullhorn"></i>&nbsp;
@@ -105,7 +83,8 @@ pageEncoding="utf-8"%>
               <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
                 <center><h1>THÔNG TIN CÁ NHÂN</h1></center>
               </div>
-              <form name="xuly" action="" method="post">
+              <center><p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p></center>
+              <form id="contactform" name="contact" action="thongtincanhanServlet" method="post">
                 <table border="0" cellpadding="0" cellspacing="0">
                   <div class="panel-body">
                     <div class="form-group">
@@ -125,22 +104,22 @@ pageEncoding="utf-8"%>
 
                     <div class="form-group">
                       <lable for="txtemail" class="control-lable">Địa chỉ email </lable>
-                      <input type="text" name="txtemail" id="txtemail" class="form-control" tabindex="3" placeholder="Địa chỉ email" required>
+                      <input type="text" name="txtemail" id="txtemail" class="form-control" tabindex="4" placeholder="Địa chỉ email" required>
                     </div>
 
                     <div class="form-group">
                       <lable for="txtsdt" class="control-lable">Số điện thoại </lable>
-                      <input type="text" name="txtsdt" id="txtsdt" class="form-control" tabindex="3" placeholder="Số điện thoại" required>
+                      <input type="text" name="txtsdt" id="txtsdt" class="form-control" tabindex="5" placeholder="Số điện thoại" required>
                     </div>
 
                     <div class="form-group">
                       <lable for="txtcmnd" class="control-lable">Số CMND </lable>
-                      <input type="text" name="txtcmnd" id="txtcmnd" class="form-control" tabindex="3" placeholder="Số chứng minh nhân dân" required>
+                      <input type="text" name="txtcmnd" id="txtcmnd" class="form-control" tabindex="6" placeholder="Số chứng minh nhân dân" required>
                     </div>
 
                     <div class="form-group">
                       <lable for="txtnienkhoa" class="control-lable">Niên khóa </lable>
-                      <input type="text" name="txtnienkhoa" id="txtnienkhoa" class="form-control" tabindex="3" placeholder="Niên khóa" required>
+                      <input type="text" name="txtnienkhoa" id="txtnienkhoa" class="form-control" tabindex="7" placeholder="Niên khóa" required>
                     </div>
 
                     <div class="form-group">
@@ -179,25 +158,14 @@ pageEncoding="utf-8"%>
 
 
                     <div class="form-group">
-                      <div class="form-horizontal">
-
-                        <div class="control-group">
-                          <label for="date-picker" class="control-label">Ngày sinh</label>
-                          <div class="controls">
-                            <div class="input-group">
-                              <input id="date-picker" type="text" class="date-picker form-control" placeholder="mm/dd/yyyy"/>
-                              <label for="date-picker" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          <label for="txtngaysinh" class="control-label">Ngày sinh </label>
+                          <input id="txtngaysinh" name="txtngaysinh" min="2000-01-01" type="date" class="txt" tabindex="9" placeholder="mm/dd/yyyy" required/>
                     </div>
 
 
                     <div class="form-group">
                       <lable for="txtghichu" class="control-lable">Ghi chú cá nhân </lable>
-                      <textarea type="text" rows="5" name="txtghichu" id="txtghichu" class="form-control" tabindex="3" placeholder="Ghi chú cá nhân" required> </textarea>
+                      <textarea type="text" rows="5" name="txtghichu" id="txtghichu" class="form-control" tabindex="10" placeholder="Ghi chú cá nhân" required> </textarea>
                     </div>
 
                     <div class="text-center">
@@ -209,7 +177,7 @@ pageEncoding="utf-8"%>
               </form>
             </div>
             <ol class="breadcrumb">
-              <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
+              <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>               </div>
             </div>
           </div>
         </div>
@@ -224,6 +192,5 @@ pageEncoding="utf-8"%>
       <div id="loading">
         <span>Đang tải ...</span>
       </div>
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>
     </html>

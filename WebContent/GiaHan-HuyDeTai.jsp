@@ -79,12 +79,12 @@ pageEncoding="utf-8"%>
           </div>
           <div id="w">
             <div class="panel panel-default">
-              <div style="color: rgb(7, 132, 163);" class"panel-heading">  
-                <center><h1 style="font-family: verdana;color:rgb(87,87,87);" >Gia hạn - hủy đề tài</h1> </center>
+              <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h1>GIA HẠN - HỦY ĐỀ TÀI</h1></center>
               </div>
-              <form id="contactform" name="contact" action="nopbaocaoServlet" method="post">
-                <center><p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p></center>
+              <center><p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p></center>
                 <table border="0" cellpadding="0" cellspacing="0">
+                <form id="contactform" name="contact" action="nopbaocaoServlet" method="post">
                   <div class="panel-body">
                     <div class="form-group">
                       <lable for="txtname" class="control-lable">Họ tên </lable>

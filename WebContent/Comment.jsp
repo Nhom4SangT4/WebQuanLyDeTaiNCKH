@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 
 <!doctype html>
 <html lang="en-US">
@@ -19,7 +21,14 @@
  
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
 
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, tendetai, Comment from dangkydetai where TrangThai='DUYET'") ; 
+  %>
 	<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
@@ -81,11 +90,17 @@
             <TR align="center">
 
                       
-                      <th align="center" data-hide="phone"><u>Mã ĐT</u></th>
+                      <th align="center" data-hide="phone"><u>Mã Đề Tài</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Comment</u></th>
             </TR>
-
+			<% while(resultset.next()){ %>
+            <TR>
+              	<TD> <%= resultset.getString(1) %></td>
+                <TD> <%= resultset.getString(2) %></TD>
+                <TD> <%= resultset.getString(3) %></TD>
+              </TR>
+              <% } %>
         </TABLE>
 </div>
 

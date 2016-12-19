@@ -29,7 +29,7 @@ public class DAO {
 	public static int DangKyDeTai(String hoten, String mssv, String khoa, String tendetai, String linhvuc, String thoigianbatdau, String thoigianketthuc, String kinhphi, String ghichu) throws SQLException {
 	     Connection conn=connect(); 
 	     PreparedStatement pst = null;  	     
-	     pst = conn.prepareStatement("insert into dangkydetai(hoten, mssv, khoa, tendetai, linhvuc, thoigianbatdau, thoigianketthuc, kinhphi, ghichu) values (?,?,?,?,?,?,?,?,?)");
+	     pst = conn.prepareStatement("insert into dangkydetai(hoten, mssv, khoa, tendetai, linhvuc, thoigianbatdau, thoigianketthuc, kinhphi, ghichu, TrangThai) values (?,?,?,?,?,?,?,?,?,'CHO DUYET')");
 	     pst.setString(1, hoten);  
 	     pst.setString(2, mssv);
 	     pst.setString(3, khoa);  
