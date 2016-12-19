@@ -58,10 +58,11 @@
         
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
-       	<a href="HomeNghiemThu.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
-		<a href="QuanLyDeTai.jsp" class="list-group-item active "><span class="pull-right"></span>Quản Lý Đề Tài</a>
-		<a href="GiaHanHuy.jsp" class="list-group-item "><span class="pull-right"></span>Gia hạn,Hủy</a>
-		<a href="NghiemThuDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Nghiệp Thu Đề Tài </a>       
+       	<a href="HomeNghiemThu.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
+			<a href="NT_QuanLyDeTai.jsp" class="list-group-item active"><span class="pull-right"></span>Quản Lý Đề Tài</a>
+			<a href="NT_PhanCongPhanBien.jsp" class="list-group-item"><span class="pull-right"></span>Phân Công Phản Biện </a>
+			<a href="NT_GiaHanHuy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý Gia hạn-Hủy</a>
+			<a href="NT_NghiemThuDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Đánh Giá Đề Tài </a>
     </div>
                     </div>
                 </div>

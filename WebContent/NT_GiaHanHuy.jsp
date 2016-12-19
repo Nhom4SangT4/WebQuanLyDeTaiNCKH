@@ -58,71 +58,62 @@
         
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
-       		
        	<a href="HomeNghiemThu.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
-		<a href="QuanLyDeTai.jsp" class="list-group-item  "><span class="pull-right"></span>Quản Lý Đề Tài</a>
-		<a href="GiaHanHuy.jsp" class="list-group-item "><span class="pull-right"></span>Gia hạn,Hủy</a>
-		<a href="NghiemThuDeTai.jsp" class="list-group-item active "><span class="pull-right"></span>Nghiệm Thu Đề Tài </a>       
-   
+			<a href="NT_QuanLyDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý Đề Tài</a>
+			<a href="NT_PhanCongPhanBien.jsp" class="list-group-item "><span class="pull-right"></span>Phân Công Phản Biện </a>
+			<a href="NT_GiaHanHuy.jsp" class="list-group-item active"><span class="pull-right"></span>Quản Lý Gia hạn-Hủy</a>
+			<a href="NT_NghiemThuDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Đánh Giá Đề Tài </a>
     </div>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <ol class="breadcrumb">
-  <li><a href="HomeNghiemThu.jsp">Home</a></li><li><a href="#">Nghiệm Thu Đề Tài</a></li><li class="active"></li></ol>    <div class="well-sm">
-        <span>
-            <span id="random_tin">
-            <i class="icon-bullhorn"></i>&nbsp;
-            <img src="bullet-blue-icon.png" />
-            </span>
-           
-        </span>    
-    </div>
-  		  <table class="table table-hover">
+  <li><a href="HomeNghiemThu.jsp">Home</a></li><li class="active">Gia Hạn,Hủy</li></ol>
+  <div class="panel panel-default">
+                        <div  style="color: rgb(7, 132, 163);" class="panel-heading">
+                            <h4 style="font-family: verdana;color:rgb(87,87,87);">Chi tiết đề tài</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="detail">
+    <table class="table table-hover">
+	    <tr>
+            <td>Tên Sinh Viên</td>
+            <td>Nguyễn An</td>
+        </tr>
         <tr>
             <td>Tên đề tài</td>
             <td>Xây dựng ứng dụng di động bằng React Native</td>
-        </tr>
-        <tr>     
-            <td>Tên Giảng Viên</td>
-            <td>Nguyển Trần Thu</td>
-        </tr>
-		<tr>     
-            <td>Tên Sinh Viên</td>
-            <td>Nguyển An</td>
-        </tr>
-		<tr>     
-            <td>Bài Nộp</td>
-            <td>File Nộp </td>
-        </tr>
-		
-
-		</table>
-	<form id="contactform" name="contact" action="HomeNghiemThu.jsp" method="post">
+			</tr>
+			<tr>
+            <td>Mục đích</td>
+            <td>Xin Gia Hạn</td>
+			</tr>
+			
+			
+        </table>
+	<form id="contactform" name="contact" action="commentServlet" method="post">
   
    
-  <div class="form-group">
-    <label for="message">Comment: <span class="req"></span></label>
-    <textarea type="text" row="5" class="form-control" name="txtComment" id="txtComment" class="txtarea" tabindex="1" required></textarea>
+  <div class="row">
+    <label for="message">Lý Do : <span class="req"></span></label>
+    <textarea name="txtComment" id="txtComment" class="txtarea" tabindex="1000px" required></textarea>
   </div>
-  <div class="form-group">
-    <label for="message">Comment của SV: <span class=""></span></label>
-    <textarea type="text" row="5" class="form-control" name="cmtcuaban" id="cmtcuaban" class="txtarea" tabindex="8" required></textarea>
-  </div>
-   
-  <div class="text-center">
-    <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="9" value="Xong">
-    </div>
-</form>
+        <tr class="warning">       
+            
+            <td>
+                        
+       
+
+	<li><a href="HomeNghiemThu.jsp">Quay Về</a></li><li class="active">  </li></ol>
+	<li><a href="#">Duyệt  </a></li><li class="active">   </li></ol>	   
+ </td>  
 			
-		
-
-
-	
-	
-
+        </tr>
+    </table>
+</div>
+</div> 
                     <ol class="breadcrumb">
-  <li><a href="#">Home</a></li><li><a href="jsp">Nghiệm Thu Đề tài</a></li><li class="active"></li></ol></ol>                 </div>
+  <li><a href="#">Home</a></li><li class="active">Gia Hạn,Hủy</li></ol>               </div>
             </div>
         </div>
     </div>
@@ -139,4 +130,5 @@
 </div>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
