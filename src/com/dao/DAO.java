@@ -54,6 +54,16 @@ public class DAO {
 	     return i;
 	}
 	
+	public static int NopBaoCao(String linknopbai, String madetai) throws SQLException {
+		Connection conn=connect(); 
+	     PreparedStatement pst = null;  	     
+	     pst = conn.prepareStatement("update dangkydetai set linknopbai=? where madetai=?");
+	     pst.setString(1, linknopbai);  
+	     pst.setString(2, madetai); 
+	     int i= pst.executeUpdate();
+	     return i;
+	}
+	
 	
 	public static int DuyetDeTai(String TrangThai, String madetai) throws SQLException {
 	     Connection conn=connect(); 

@@ -41,19 +41,19 @@ public class xoadetaiServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String madetai = request.getParameter("txtMaDeTai");  
+	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
 	    	if(DAO.XoaDeTai(madetai)>0){ 
 	    		out.print("<script>");
 	    		out.print("alert(\"Xóa Thành Công!!!\");");  
 	    		out.print("</script>");
-	    		RequestDispatcher rd=request.getRequestDispatcher("DuyetDeTai.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("GV_DuyetDangKyDeTai.jsp");    
 				    rd.include(request,response); 
 	    	   }
 	    	else
 	    	{
-	    		RequestDispatcher rd=request.getRequestDispatcher("DuyetDeTai.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("GV_DuyetDangKyDeTai.jsp");    
 				    rd.include(request,response); 
 	    	}
 	    		   

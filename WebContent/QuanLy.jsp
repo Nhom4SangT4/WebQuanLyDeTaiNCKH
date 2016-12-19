@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>::. Quản Lý .::</title>
+  <title>::. Quản Lý Đề Tài .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
@@ -61,7 +61,7 @@
        	<a href="HomeDuyetDT.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
        	<a href="ThongtincanhanGV.jsp" class="list-group-item "><span class="pull-right"></span>Thông tin cá nhân</a>
        	<a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
-		<a href="QuanLy.jsp" class="list-group-item active"><span class="pull-right"></span>Quản lý đề tài của tôi</a>
+		<a href="QuanLy.jsp" class="list-group-item active"><span class="pull-right"></span>Quản lý đề tài</a>
 		<a href="ThongKe.jsp" class="list-group-item "><span class="pull-right"></span>Thống Kê</a>
 		<a href="GV_QuanLyDeTaiDuocPhanCong.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
 		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       

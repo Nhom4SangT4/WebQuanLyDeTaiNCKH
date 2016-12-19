@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.dao.DAO;
 
 /**
- * Servlet implementation class duyetdetaiservlet
+ * Servlet implementation class commentServlet
  */
-@WebServlet("/duyetdetaiservlet")
-public class duyetdetaiservlet extends HttpServlet {
+@WebServlet("/nopbaocaoServlet")
+public class nopbaocaoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public duyetdetaiservlet() {
+    public nopbaocaoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,20 +41,20 @@ public class duyetdetaiservlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String TrangThai = request.getParameter("txtTrangThai");
+	    String linknopbai = request.getParameter("txtlinknopbai");
 	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
-	    	if(DAO.DuyetDeTai(TrangThai, madetai)>0){ 
+	    	if(DAO.NopBaoCao(linknopbai, madetai)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"Duyệt Thành Công!!!\");");  
+	    		out.print("alert(\"Nộp Bài Thành Công!!!\");");  
 	    		out.print("</script>");
-	    		RequestDispatcher rd=request.getRequestDispatcher("GV_DuyetDangKyDeTai.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("NopBaoCaoSV.jsp");    
 				    rd.include(request,response); 
 	    	   }
 	    	else
 	    	{
-	    		RequestDispatcher rd=request.getRequestDispatcher("GV_DuyetDangKyDeTai.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("NopBaoCaoSV.jsp");    
 				    rd.include(request,response); 
 	    	}
 	    		   

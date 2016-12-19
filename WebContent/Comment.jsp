@@ -7,7 +7,7 @@ pageEncoding="utf-8"%>
 <html lang="en-US">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>::. Đăng Ký Đề Tài .::</title>
+  <title>::. Comment .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/styles.css">
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />

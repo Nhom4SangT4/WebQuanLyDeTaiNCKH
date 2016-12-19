@@ -86,12 +86,14 @@
         </span>    
     </div>
                         <div id="w">
-  <center><h1>Danh Sách Tài Khoản</h1></center>
+  		<div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h1>DANH SÁCH TÀI KHOẢN</h1></center>
+              </div>
   <TABLE class="table table-hover" >
             <TR align="center">
 
                       
-                      <th align="center" data-hide="phone"><u>ID</u></th>
+                      <th align="center" data-hide="phone"><u>Tên tài khoản</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Email</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Nhóm</u></th>
             </TR>
@@ -105,34 +107,56 @@
         </TABLE>
 </div>
 
-  <form id="contactform" name="contact" action="phanquyentaikhoanServlet" method="post">
-  
-  <div class="row">
-    <label for="name">ID Set: <span class="req"></span></label>
-    <input type="text" name="txtid" id="txtid" class="form-control" tabindex="1" placeholder="ID" required>
-  </div>
-   
-  <div class="row">
-    <label for="MSSV">Phân Nhóm: <span class="req"></span></label>
-    <input type="text" name="txtNhom" id="txtNhom" class="form-control" tabindex="2" placeholder="2/3" required>
-  </div>
-   
-  <div class="text-center">
-    <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="3" value="Hoàn Thành">
-    </div><br><br>
-</form>
+  	<div id="w">
+            <div class="panel panel-default">
+              <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h3>PHÂN QUYỀN TÀI KHOẢN</h3></center>
+              </div>
+  					<table border="0" cellpadding="0" cellspacing="0">
+  					
+              <form id="contactform" name="contact" action="phanquyentaikhoanServlet" method="post">
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <lable for="txttentaikhoan" class="control-lable"><strong>Tên tài khoản </strong></lable>
+                      <input  type="text" name="txttentaikhoan" id="txttentaikhoan" class="form-control" tabindex="1" placeholder="Tên tài khoản" required>
+                    </div>
 
-<form id="contactform" name="contact" action="xoataikhoanServlet" method="post">
-  
-  <div class="row">
-    <label for="name">ID Xóa: <span class="req"></span></label>
-    <input type="text" name="txtTenTK" id="txtTenTK" class="form-control" tabindex="1" placeholder="ID" required>
-  </div>
-   
-  <div class="text-center">
-    <input type="submit" id="submitbtn" name="button" class="btn btn-danger" tabindex="2" value="Xóa">
-    </div><br><br>
-</form>
+                    <div class="form-group">
+                      <lable for="txtnhom" class="control-lable">Phân quyền </lable>
+                      <select name="txtnhom" id="txtnhom" class="form-control" tabindex="2" required>
+                        <option value="1">Quyền Sinh Viên</option>
+                        <option value="2">Quyền Giảng Viên</option>
+                        <option value="3">Quyền Nghiệm Thu</option>
+                        </select>
+                    </div>
+
+                    <div class="text-center">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="3" value="Xác nhận">
+                    </div>
+                  </div> 
+                </table>
+              </form>
+              
+              <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h3>XÓA TÀI KHOẢN</h3></center>
+              </div>
+              <form id="contactform" name="contact" action="xoataikhoanServlet" method="post">
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <lable for="txttentaikhoan" class="control-lable"><strong>Tên tài khoản </strong></lable>
+                      <input  type="text" name="txttentaikhoan" id="txttentaikhoan" class="form-control" tabindex="1" placeholder="Tên tài khoản" required>
+                    </div>
+
+                    <div class="text-center">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-danger" tabindex="2" value="Xác nhận XÓA">
+                    </div>
+                  </div> 
+                </table>
+              </form>
+              
+            </div>
                     <ol class="breadcrumb">
   <li><a href="HomeAdmin.jsp">Home</a></li><li class="active">Quản Lý Tài Khoản</li></ol>              </div>
             </div>

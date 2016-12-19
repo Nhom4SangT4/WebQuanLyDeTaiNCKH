@@ -41,12 +41,12 @@ public class xoataikhoanServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String tentaikhoan = request.getParameter("txtTenTK");  
+	    String tentaikhoan = request.getParameter("txttentaikhoan");  
 	   
 	    try{
 	    	if(DAO.XoaTaiKhoan(tentaikhoan)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"XÛa Th‡nh CÙng!!!\");");  
+	    		out.print("alert(\"X√≥a T√†i Kho·∫£n Th√†nh C√¥ng!!!\");");  
 	    		out.print("</script>");
 	    		RequestDispatcher rd=request.getRequestDispatcher("PhanQuyenTaiKhoan.jsp");    
 				    rd.include(request,response); 

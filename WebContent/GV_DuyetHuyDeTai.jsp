@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -21,6 +23,14 @@ pageEncoding="utf-8"%>
   
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, tendetai, TrangThai, linknopbai from dangkydetai where TrangThai='DUYET'") ; 
+  %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
@@ -61,7 +71,7 @@ pageEncoding="utf-8"%>
        	<a href="HomeDuyetDT.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
        	<a href="ThongtincanhanGV.jsp" class="list-group-item "><span class="pull-right"></span>Thông tin cá nhân</a>
        	<a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
-		<a href="QuanLy.jsp" class="list-group-item active"><span class="pull-right"></span>Quản Lý</a>
+		<a href="QuanLy.jsp" class="list-group-item active"><span class="pull-right"></span>Quản Lý đề tài</a>
 		<a href="ThongKe.jsp" class="list-group-item "><span class="pull-right"></span>Thống Kê</a>
 		<a href="GV_QuanLyDeTaiDuocPhanCong.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
 		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
@@ -108,67 +118,6 @@ pageEncoding="utf-8"%>
 </div>
 <button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Từ chối</button></td>                                    
                                                                     </tr>
-                                                    <tr>
-                                <td><span class="text-info">2</span></td>
-                                <td>IT002</td>
-                                <td>Phát triển ứng dụng đa nền tảng cho điện thoại di động</td>
-                                <td>Ngô Thừa Ân</td>
-                                <td>Không đủ kinh phí</td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Chấp nhận</button></td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Từ chối</button></td>                                    
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">3</span></td>
-                                <td>IT003</td>
-                                <td>Xây dựng ứng dụng quản lý công việc cho Android</td>
-                                <td>Hồ Quang Hiếu</td>
-                                <td>Vì 1 vài lý do về chuyện riêng tư</td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Chấp nhận</button></td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Từ chối</button></td>                                    
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">4</span></td>
-                                <td>IT004</td>
-                                <td>Lập trình Game cho điện thoại di động</td>
-                                <td>Trịnh Đình Quang</td>
-                                <td>...</td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Chấp nhận</button></td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Từ chối</button></td>                                    
-                                                                    </tr>
-                                                    
-                                                    <tr>
-                                <td><span class="text-info">8</span></td>
-                                <td>IT006</td>
-                                <td>Xây dựng website tra cứu vé máy bay sử dụng Spring MVC framework</td>
-                                <td>Hoàng Gia Huy</td>
-                                <td>...</td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Chấp nhận</button></td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Từ chối</button></td>                                    
-                                                                    </tr>
                             	</tbody>
     	<tfoot>
     		<tr>
@@ -181,7 +130,7 @@ pageEncoding="utf-8"%>
 </div>
 
 	                    <ol class="breadcrumb">
-  <li><a href="Home.jsp">Home</a></li><li><a href="QuanLy.jsp">Quản Lý</a></li><li class="active">Duyệt Đề Tài</li></ol></ol>                 </div>
+  <li><a href="Home.jsp">Home</a></li><li><a href="QuanLy.jsp">Quản Lý đề tài</a></li><li class="active">Duyệt Hủy Đề Tài</li></ol></ol>                 </div>
             </div>
         </div>
     </div>

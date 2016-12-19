@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>  
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>::. Hủy đề tài .::</title>
+  <title>::. Nộp báo cáo .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
@@ -16,10 +19,16 @@ pageEncoding="utf-8"%>
   <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
-  <script type="js/bootstrap.min.js"></script>
   
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, tendetai, TrangThai, linknopbai from dangkydetai where TrangThai='DUYET'") ; 
+  %>
   <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
    <tbody><tr>
 
@@ -58,12 +67,12 @@ pageEncoding="utf-8"%>
 
                 <h4 id="mobile_home">Danh Mục</h4>   
               </div>
-              <a href="HomeSinhVien.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
-              <a href="ThongTinCaNhanSV.jsp" class="list-group-item "><span class="pull-right"></span>Thông Tin Cá Nhân</a>
-              <a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
-              <a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
-              <a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia Hạn-Hủy Đề Tài</a>
-              <a href="NopBaoCaoSV.jsp" class="list-group-item active"><span class="pull-right"></span>Nộp Báo Cáo</a>     
+              	<a href="HomeSinhVien.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
+				<a href="ThongTinCaNhanSV.jsp" class="list-group-item"><span class="pull-right"></span>Thông Tin Cá Nhân</a>
+				<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
+				<a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
+				<a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia Hạn-Hủy Đề Tài</a>            
+    			<a href="NopBaoCaoSV.jsp" class="list-group-item active"><span class="pull-right"></span>Nộp Báo Cáo</a>
             </div>
           </div>
         </div>
@@ -79,44 +88,52 @@ pageEncoding="utf-8"%>
             </span>    
           </div>
           <div id="w">
-            <div class="panel panel-default">
-              <div style="color: rgb(7, 132, 163);" class"panel-heading">  
-                <center><h1 style="font-family: verdana;color:rgb(87,87,87);" >Nộp báo cáo</h1> </center>
+			<div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h1>Danh Sách Các Đề Tài Được Duyệt</h1></center>
               </div>
+	<TABLE class="table table-hover" >
+            <TR align="center">
+
+                      
+                      <th align="center" data-hide="phone">Mã Đề Tài</th>
+                      <th align="center" data-hide="phone,tablet">Tên Đề Tài</th>
+                      <th align="center" data-hide="phone,tablet">Trạng Thái</th>
+                      <th align="center" data-hide="phone,tablet">Bài Nộp</th>
+            </TR>
+			<% while(resultset.next()){ %>
+            <TR>
+              	<TD> <%= resultset.getString(1) %></td>
+                <TD> <%= resultset.getString(2) %></TD>
+                <TD> <%= resultset.getString(3) %></TD>
+                <TD> <%= resultset.getString(4) %></TD>
+              </TR>
+              <% } %>
+        </TABLE>
+</div>
+          <div id="w">
+            <div class="panel panel-default">
+              <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h1>NỘP BÁO CÁO</h1></center>
+              </div>
+  					<table border="0" cellpadding="0" cellspacing="0">
               <form id="contactform" name="contact" action="nopbaocaoServlet" method="post">
-                <center><p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p></center>
                 <table border="0" cellpadding="0" cellspacing="0">
                   <div class="panel-body">
                     <div class="form-group">
-                      <lable for="txtname" class="control-lable">Họ tên </lable>
-                      <input type="text" name="txtname" id="txtname" class="form-control" tabindex="1" placeholder="Họ và tên" required>
+                      <lable for="txtmadetai" class="control-lable"><strong>Mã đề tài </strong></lable>
+                      <input  type="text" name="txtmadetai" id="txtmadetai" class="form-control" tabindex="1" placeholder="Mã số đề tài" required>
                     </div>
 
                     <div class="form-group">
-                      <lable for="txtmssv" class="control-lable">MSSV </lable>
-                      <input type="text" name="txtmssv" id="txtmssv" class="form-control" tabindex="2" placeholder="Mã số sinh viên" required>
-                    </div>
-
-                    <div class="form-group">
-                      <lable for="txtmadetai" class="control-lable">Mã đề tài </lable>
-                      <input type="text" name="txtmadetai" id="txtmadetai" class="form-control" tabindex="3" placeholder="Mã đề tài" required>
-                    </div>
-
-                    <div class="form-group">
-                      <lable for="txttendetai" class="control-lable">Tên đề tài </lable>
-                      <input type="text" name="txttendetai" id="txttendetai" class="form-control" tabindex="3" placeholder="Tên đề tài" required>
-                    </div>
-
-                    <div> 
-                      <label for= "inputfile">Đính kèm </label>
-                      <input type= "file" id ="inputfile">
+                      <lable for="txtlinknopbai" class="control-lable">Link nộp bài </lable>
+                      <input type="text" name="txtlinknopbai" id="txtlinknopbai" class="form-control" tabindex="2" placeholder="Đường dẫn file báo cáo (File được Upload lên GoogleDrive)" required>
                     </div>
 
                     <div class="text-center">
-                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" value="Nộp báo cáo">
-                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  value="Nhập lại">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="3" value="Xác nhận nộp">
+                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary" tabindex="4"  value="Nhập lại">
                     </div>
-                  </div>
+                  </div> 
                 </table>
               </form>
             </div>

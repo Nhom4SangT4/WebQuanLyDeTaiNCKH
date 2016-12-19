@@ -41,8 +41,8 @@ public class phanquyentaikhoanServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String Nhom = request.getParameter("txtNhom");
-	    String tentaikhoan = request.getParameter("txtid");  
+	    String Nhom = request.getParameter("txtnhom");
+	    String tentaikhoan = request.getParameter("txttentaikhoan");  
 	   
 	    try{
 	    	if(DAO.PhanQuyenTaiKhoan(Nhom, tentaikhoan)>0){ 
