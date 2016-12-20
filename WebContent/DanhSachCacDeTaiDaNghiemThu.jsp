@@ -29,7 +29,7 @@ pageEncoding="utf-8"%>
 
   Statement statement = connection.createStatement() ;
   ResultSet resultset = 
-  statement.executeQuery("select madetai, tendetai, Comment, diem from dangkydetai where diem is not null") ; 
+  statement.executeQuery("select madetai, tendetai, diem, Comment from dangkydetai where diem is not null") ; 
   %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
@@ -68,7 +68,6 @@ pageEncoding="utf-8"%>
         
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
-       	
 		<a href="HomeSinhVien.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
 		<a href="ThongTinCaNhanSV.jsp" class="list-group-item "><span class="pull-right"></span>Thông Tin Cá Nhân</a>
 		<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>

@@ -45,7 +45,7 @@ public class quanlygiahanhuyServlet extends HttpServlet {
 	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
-	    	if(DAO.ChamDiem(thoigianketthuc, madetai)>0){ 
+	    	if(DAO.QuanLyGiaHanHuy(thoigianketthuc, madetai)>0){ 
 	    		out.print("<script>");
 	    		out.print("alert(\"Duyệt Gia Hạn-Hủy Thành Công!!!\");");  
 	    		out.print("</script>");
