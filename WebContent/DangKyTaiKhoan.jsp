@@ -6,13 +6,15 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>::. Đăng Ký Tài Khoản .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/styles.css">
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/boostrap.css">
+  <link rel="stylesheet" media="all" type="text/css" href="CSS/boostrap.min.css">
  
 </head>
 <body>
 <div id="w">
 	<h1>Đăng Ký Tài Khoản</h1>
 <form id="contactform" name="contact" method="post" action="dangkytaikhoanServlet">
-  <p class="note"><span class="req">*</span> Mời Bạn điền đầy đủ thông tin</p>
+  <center><p class="note"><span class="req">*</span> Mời Bạn điền đầy đủ thông tin</p></center>
   <div class="row">
     <label for="id">Tên Tài Khoản: <span class="req">*</span></label>
     <input type="text" name="txtid" id="id" class="txt" tabindex="1" placeholder="Tên tài khoản" required>
@@ -30,10 +32,10 @@
    
   
    
-  <div class="center">
-    <input type="submit" id="submitbtn" name="btndangky" tabindex="4" value="Đăng Ký">
+  <div class="col-sm-0">
+    <center><input type="submit" id="submitbtn" name="btndangky" class="btn btn-primary" tabindex="4" value="Đăng Ký"></center>
+  </div>
   </div>
 </form>
-</div>
 </body>
 </html>

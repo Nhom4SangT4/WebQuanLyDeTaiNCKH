@@ -90,10 +90,7 @@
                                 <td>Xây dựng ứng dụng di động bằng React Native</td>
                                 <td>Đặng Ngọc Sơn</td>
                                 <td>30%</td>
-                                <td><div id="spoiler" style="display: none;">
-
-</div>
-<button onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}" title="Click to show/hide" class="btn btn-success btn-xs">Chi tiết</button></td>
+                                                                        <td><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></td>
                                                                     </tr>
                                                     <tr>
                                 <td><span class="text-info">2</span></td>
@@ -101,7 +98,7 @@
                                 <td>Phát triển ứng dụng đa nền tảng cho điện thoại di động</td>
                                 <td>Ngô Thừa Ân</td>
                                 <td>10%</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/phat-trien-ung-dung-da-nen-tang-cho-dien-thoai-di-dong-201609111473584798.html" class="btn btn-success btn-xs">Chi tiết</a></td>
+                                                                        <td><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></td>
                                                                     </tr>
                                                     <tr>
                                 <td><span class="text-info">3</span></td>
@@ -109,24 +106,7 @@
                                 <td>Xây dựng ứng dụng quản lý công việc cho Android</td>
                                 <td>Hồ Quang Hiếu</td>
                                 <td>50%</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/xay-dung-ung-dung-quan-ly-cong-viec-cho-android-201609111473584799.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">4</span></td>
-                                <td>IT004</td>
-                                <td>Lập trình Game cho điện thoại di động</td>
-                                <td>Trịnh Đình Quang</td>
-                                <td>80%</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/lap-trinh-game-cho-dien-thoai-di-dong-201609111473584800.html" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    
-                                                    <tr>
-                                <td><span class="text-info">8</span></td>
-                                <td>IT006</td>
-                                <td>Xây dựng website tra cứu vé máy bay sử dụng Spring MVC framework</td>
-                                <td>Hoàng Gia Huy</td>
-                                <td>90%</td>
-                                                                        <td><a target="_blank" href="http://dkdt.fit.hcmute.edu.vn/chi-tiet-de-tai/xay-dung-website-tra-cuu-ve-may-bay-su-dung-spring-mvc-framework-201609111473584823.html" class="btn btn-success btn-xs">Chi tiết</a></td>
+                                                                        <td><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></td>
                                                                     </tr>
                             	</tbody>
     	<tfoot>

@@ -105,15 +105,6 @@
             </a>
             
             
-        
-            <a href="GV_DeTaiDuocPhanCongPheDuyet.jsp">
-                <li class="article-area">
-                    <p>
-                    Danh sách các đề tài được phân công phê duyệt                                              
-                                                </p>
-                </li>
-            </a>
-            
             
         
             <a href="GV_DeTaiDuocPhanCongPhanBien.jsp">

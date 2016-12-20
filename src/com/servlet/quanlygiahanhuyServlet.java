@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.dao.DAO;
 
 /**
- * Servlet implementation class giahanhuybienServlet
+ * Servlet implementation class quanlygiahanhuyServlet
  */
-@WebServlet("/giahanhuyServlet")
-public class giahanhuyServlet extends HttpServlet {
+@WebServlet("/quanlygiahanhuyServlet")
+public class quanlygiahanhuyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public giahanhuyServlet() {
+    public quanlygiahanhuyServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,20 +41,20 @@ public class giahanhuyServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String giahanhuy = request.getParameter("txtgiahanhuy");
+	    String thoigianketthuc = request.getParameter("txtthoigianketthuc");
 	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
-	    	if(DAO.GiaHanHuy(giahanhuy, madetai)>0){ 
+	    	if(DAO.ChamDiem(thoigianketthuc, madetai)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"Nộp Đơn Gia hạn-Hủy Thành Công!!!\");");  
+	    		out.print("alert(\"Duyệt Gia Hạn-Hủy Thành Công!!!\");");  
 	    		out.print("</script>");
-	    		RequestDispatcher rd=request.getRequestDispatcher("GiaHan-HuyDeTai.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("NT_GiaHanHuy.jsp");    
 				    rd.include(request,response); 
 	    	   }
 	    	else
 	    	{
-	    		RequestDispatcher rd=request.getRequestDispatcher("GiaHan-HuyDeTai.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("NT_GiaHanHuy.jsp");    
 				    rd.include(request,response); 
 	    	}
 	    		   
