@@ -61,7 +61,8 @@
 		<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
 		<a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
 		<a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia Hạn - Hủy Đề Tài</a>
-		<a href="NopBaoCao.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>     
+		<a href="NopBaoCao.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>
+		<a href="DanhSachCacDeTaiDaNghiemThu.jsp" class="list-group-item"><span class="pull-right"></span>Xem Đề Tài Đã Nghiệm Thu</a>     
     </div>
                     </div>
                 </div>

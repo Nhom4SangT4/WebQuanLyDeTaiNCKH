@@ -131,7 +131,7 @@
 
 					<div class="form-group">
                       <lable for="txtcomment" class="control-lable"><strong>Comment đề tài </strong></lable>
-                      <textarea  type="text" name="txtcomment" id="txtcomment" class="form-control" tabindex="2" placeholder="Comment đề tài" required></textarea>
+                      <textarea  type="text" name="txtcomment" rows="5" id="txtcomment" class="form-control" tabindex="2" placeholder="Comment đề tài" required></textarea>
                     </div>
 
                     <div class="text-center">
