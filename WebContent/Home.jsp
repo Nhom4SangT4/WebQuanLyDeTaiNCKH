@@ -70,10 +70,7 @@
         
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
-       	<a href="Home.jsp" class="list-group-item active"><span class="pull-right"></span>Trang Chủ</a>
-		<a href="DangKyDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Đăng Ký</a>
-		<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý</a>
-		<a href="ThongKe.jsp" class="list-group-item "><span class="pull-right"></span>Thống Kê</a>
+       	<a href="Home.jsp" class="list-group-item active"><span class="pull-right"></span>Trang Chủ</a>	
 		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
     </div>
                     </div>
