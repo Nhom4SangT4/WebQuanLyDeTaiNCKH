@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -14,12 +16,22 @@ pageEncoding="utf-8"%>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
-  
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select hoten, khoa, sdt, socmnd, gioitinh, diachi, ngaysinh, ghichu from taikhoan where tentaikhoan='nghiemthu1'") ; 
+  %>
   <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
    <tbody><tr>
 
@@ -58,8 +70,7 @@ pageEncoding="utf-8"%>
 
                 <h4 id="mobile_home">Danh Mục</h4>   
               </div>
-              	<a href="HomeDuyetDT.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
-       			<a href="ThongtincanhanGV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông tin cá nhân</a>
+              	<a href="ThongtincanhanGV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông tin cá nhân</a>
        			<a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
 				<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý đề tài</a>
 				<a href="ThongKe.jsp" class="list-group-item "><span class="pull-right"></span>Thống Kê</a>
@@ -68,33 +79,80 @@ pageEncoding="utf-8"%>
             </div>
           </div>
         </div>
-        <div class="col-md-9">
-          <ol class="breadcrumb">
-            <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>    <div class="well-sm">
-            <span>
+          <div class="col-md-9">
+                    <ol class="breadcrumb">
+  <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>
+  <span>
               <span id="random_tin">
                 <i class="icon-bullhorn"></i>&nbsp;
                 <img src="images/bullet-blue-icon.png" />
               </span>
-
-            </span>    
-          </div>
-          <div id="w">
-            <div class="panel panel-default">
+              <div class="panel panel-default">
               <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
                 <center><h1>THÔNG TIN CÁ NHÂN</h1></center>
               </div>
-              <center><p class="note"><span class="req">*</span> Mời bạn điền đầy đủ thông tin</p></center>
-              <form id="contactform" name="contact" action="thongtincanhanServlet" method="post">
-                <table border="0" cellpadding="0" cellspacing="0">
-                  <div class="panel-body">
+              <center><p class="note"><span class="req">**********</span></p></center>
+  <table class="table" data-page-size="5">
+  <% while(resultset.next()){ %>
+    		<TR">
+              <th align="center" data-hide="phone,tablet">Họ và tên </th>
+              <TD> <%= resultset.getString(1) %></td>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Khoa </th>
+              <TD> <%= resultset.getString(2) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Số điện thoại</th>
+              <TD> <%= resultset.getString(3) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Số CMND</th>
+              <TD> <%= resultset.getString(4) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Giới tính</th>
+              <TD> <%= resultset.getString(5) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Địa chỉ</th>
+              <TD> <%= resultset.getString(6) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Ngày sinh</th>
+              <TD> <%= resultset.getString(7) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Ghi chú cá nhân</th>
+              <TD> <%= resultset.getString(8) %></TD>
+            </TR>
+              <% } %>
+</div>
+    </table>
+    <div>
+    <div class="panel-body">
+  <!-- Trigger the modal with a button -->
+  
+  <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Cập nhật</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chỉnh sửa thông tin cá nhân</h4>
+        </div>
+        <form id="contactform" name="contact" action="thongtinsinhvienServlet" method="post">
+        <div class="panel-body">
                     <div class="form-group">
-                      <lable for="txtname" class="control-lable"><strong>Họ tên </strong></lable>
+                      <lable for="txtname" class="control-lable"><strong>Họ và tên </strong></lable>
                       <input  type="text" name="txtname" id="txtname" class="form-control" tabindex="1" placeholder="Họ và tên" required>
                     </div>
 
                     <div class="form-group">
-                      <lable for="txtmssv" class="control-lable">MSGV </lable>
+                      <lable for="txtmssv" class="control-lable"><strong>MSSV</strong> </lable>
                       <input type="text" name="txtmssv" id="txtmssv" class="form-control" tabindex="2" placeholder="Mã số sinh viên" required>
                     </div>
 
@@ -104,63 +162,57 @@ pageEncoding="utf-8"%>
                     </div>
 
                     <div class="form-group">
-                      <lable for="txtemail" class="control-lable">Địa chỉ email </lable>
-                      <input type="text" name="txtemail" id="txtemail" class="form-control" tabindex="4" placeholder="Địa chỉ email" required>
-                    </div>
-
-                    <div class="form-group">
                       <lable for="txtsdt" class="control-lable">Số điện thoại </lable>
-                      <input type="text" name="txtsdt" id="txtsdt" class="form-control" tabindex="5" placeholder="Số điện thoại" required>
+                      <input type="text" name="txtsdt" id="txtsdt" class="form-control" tabindex="4" placeholder="Số điện thoại" required>
                     </div>
 
                     <div class="form-group">
-                      <lable for="txtcmnd" class="control-lable">Số CMND </lable>
-                      <input type="text" name="txtcmnd" id="txtcmnd" class="form-control" tabindex="6" placeholder="Số chứng minh nhân dân" required>
+                      <lable for="txtsocmnd" class="control-lable">Số CMND </lable>
+                      <input type="text" name="txtsocmnd" id="txtsocmnd" class="form-control" tabindex="5" placeholder="Số chứng minh nhân dân" required>
                     </div>
 
                     <div class="form-group">
                       <lable for="txtnienkhoa" class="control-lable">Niên khóa </lable>
-                      <input type="text" name="txtnienkhoa" id="txtnienkhoa" class="form-control" tabindex="7" placeholder="Niên khóa" required>
+                      <input type="text" name="txtnienkhoa" id="txtnienkhoa" class="form-control" tabindex="6" placeholder="Niên khóa" required>
                     </div>
 
                     <div class="form-group">
-                      <lable for="rdogiotinh" class="control-lable">Giới tính </lable>
-                      <label class="radio-inline">
-                        <input type="radio" name="rdogioitinh" id="rdonam" checked="checked" required> Nam
-                      </label>
-                      <label class="radio-inline">
-                        <input type="radio" name="rdogioitinh" id="rdonu" required> Nữ
-                      </label>
+                      <lable for="txtgioitinh" class="control-lable">Giới tính</lable>
+                      <select name="txtgioitinh" id="txtgioitinh" class="form-control" tabindex="7" required>
+                        <option value="Nam">Nam</option>
+                        <option value="Nu">Nu</option>
+                        <option value="Khac">Khac</option>
+                      </select>
                     </div>
 
                     <div class="form-group">
-                      <lable for="optdiachi" class="control-lable">Địa chỉ</lable>
-                      <select class="form-control">
-                        <option value="tphcm">TP.HCM</option>
-                        <option value="cantho">Cần Thơ</option>
-                        <option value="dongthap">Đồng Tháp</option>
-                        <option value="soctrang">Sóc Trăng</option>
-                        <option value="binhdinh">Bình Định</option>
-                        <option value="camau">Cà Mau</option> 
-                        <option value="hanoi">Hà Nội</option>
-                        <option value="namdinh">Nam Định</option>
-                        <option value="hue">Huế</option>
-                        <option value="danang">Đà Nẵng</option>
-                        <option value="quangnam">Quảng Nam</option>
-                        <option value="baclieu">Bạc Liêu</option>
-                        <option value="dongnai">Đồng Nai</option>
-                        <option value="binhduong">Bình Dương</option>
-                        <option value="binhphuoc">Bình Phước</option>
-                        <option value="binhthuan">Bình Thuận</option>
-                        <option value="ninhthuan">Ninh Thuận</option>
-                        <option value="nghean">Nghệ An</option>
+                      <lable for="txtdiachi" class="control-lable">Địa chỉ</lable>
+                      <select name="txtdiachi" id="txtdiachi" class="form-control" tabindex="8" required>
+                        <option value="TP.HCM">TP.HCM</option>
+                        <option value="Can Tho">Cần Thơ</option>
+                        <option value="Dong Thap">Đồng Tháp</option>
+                        <option value="Soc Trang">Sóc Trăng</option>
+                        <option value="Binh Dinh">Bình Định</option>
+                        <option value="Ca Mau">Cà Mau</option> 
+                        <option value="Ha Noi">Hà Nội</option>
+                        <option value="Nam Dinh">Nam Định</option>
+                        <option value="Hue">Huế</option>
+                        <option value="Da Nang">Đà Nẵng</option>
+                        <option value="Quang Nam">Quảng Nam</option>
+                        <option value="Bac Lieu">Bạc Liêu</option>
+                        <option value="Dong Nai">Đồng Nai</option>
+                        <option value="Binh Duong">Bình Dương</option>
+                        <option value="Binh Phuoc">Bình Phước</option>
+                        <option value="Binh Thuan">Bình Thuận</option>
+                        <option value="Ninh Thuan">Ninh Thuận</option>
+                        <option value="Nghe An">Nghệ An</option>
                       </select>
                     </div>
 
 
                     <div class="form-group">
                           <label for="txtngaysinh" class="control-label">Ngày sinh </label>
-                          <input id="txtngaysinh" name="txtngaysinh" min="2000-01-01" type="date" class="txt" tabindex="9" placeholder="mm/dd/yyyy" required/>
+                          <input id="txtngaysinh" name="txtngaysinh" min="1900-01-01" type="date" class="txt" tabindex="9" placeholder="mm/dd/yyyy" required/>
                     </div>
 
 
@@ -170,13 +222,36 @@ pageEncoding="utf-8"%>
                     </div>
 
                     <div class="text-center">
-                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" value="Cập nhật">
-                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  value="Nhập lại">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="11" value="Cập nhật">
+                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary"  tabindex="12" value="Nhập lại">
                     </div>
-                  </div> 
-                </table>
-              </form>
-            </div>
+                  </div>
+                  </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+ </div>
+</div>
+  <div class="well-sm">
+        <span>
+            <span id="random_tin">
+            <i class="icon-bullhorn"></i>&nbsp;
+            <img src="images/bullet-blue-icon.png" />
+                        <small>
+                <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
+                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
+                </a>
+            </small>
+            <img src="images/new1.gif"/>
+            </span>
+           
+        </span>    
+    </div>
             <ol class="breadcrumb">
               <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>               </div>
             </div>
