@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.dao.DAO;
 
 /**
- * Servlet implementation class phancongphanbienServlet
+ * Servlet implementation class giahanhuybienServlet
  */
-@WebServlet("/phancongphanbienServlet")
-public class phancongphanbienServlet extends HttpServlet {
+@WebServlet("/giahanhuyServlet")
+public class giahanhuyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public phancongphanbienServlet() {
+    public giahanhuyServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,22 +41,20 @@ public class phancongphanbienServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String gvphanbien = request.getParameter("txtgvphanbien");
-	    String phongphanbien = request.getParameter("txtphongphanbien");
-	    String thoigianphanbien = request.getParameter("txtthoigianphanbien");
+	    String giahanhuy = request.getParameter("txtgiahanhuy");
 	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
-	    	if(DAO.PhanCongPhanBien(gvphanbien, phongphanbien, thoigianphanbien, madetai)>0){ 
+	    	if(DAO.GiaHanHuy(giahanhuy, madetai)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"Phân Công Hội Đồng Phản Biện Thành Công!!!\");");  
+	    		out.print("alert(\"Nộp Đơn Gia hạn-Hủy Thành Công!!!\");");  
 	    		out.print("</script>");
-	    		RequestDispatcher rd=request.getRequestDispatcher("NT_PhanCongPhanBien.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("GiaHan_HuyDeTai.jsp");    
 				    rd.include(request,response); 
 	    	   }
 	    	else
 	    	{
-	    		RequestDispatcher rd=request.getRequestDispatcher("NT_PhanCongPhanBien.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("GiaHan_HuyDeTai.jsp");    
 				    rd.include(request,response); 
 	    	}
 	    		   

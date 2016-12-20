@@ -29,7 +29,7 @@
 
             Statement statement = connection.createStatement() ;
             ResultSet resultset = 
-                statement.executeQuery("select madetai, tendetai, TrangThai from dangkydetai where TrangThai='CHO PHAN BIEN'") ; 
+                statement.executeQuery("select madetai, tendetai, TrangThai, gvphanbien, phongphanbien, thoigianphanbien from dangkydetai where TrangThai='CHO PHAN BIEN'") ; 
      %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
@@ -99,12 +99,18 @@
                       <th align="center" data-hide="phone"><u>Mã đề tài</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Tên đề tài</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Trạng thái</u></th>
+                      <th align="center" data-hide="phone,tablet"><u>GV phản biện</u></th>
+                      <th align="center" data-hide="phone,tablet"><u>Phòng</u></th>
+                      <th align="center" data-hide="phone,tablet"><u>Ngày</u></th>
             </TR>
             <% while(resultset.next()){ %>
             <TR>
                 <TD> <%= resultset.getString(1) %></td>
                 <TD> <%= resultset.getString(2) %></TD>
                 <TD> <%= resultset.getString(3) %></TD>
+                <TD> <%= resultset.getString(4) %></TD>
+                <TD> <%= resultset.getString(5) %></TD>
+                <TD> <%= resultset.getString(6) %></TD>
             </TR>
             <% } %>
         </TABLE>
@@ -128,11 +134,12 @@
                     <div class="form-group">
                       <lable for="txtgvphanbien" class="control-lable">GV phản biện </lable>
                       <select name="txtgvphanbien" id="txtgvphanbien" class="form-control" tabindex="2" required>
-                        <option value="dtd">TS. Đặng Thanh Dũng</option>
-                        <option value="nttv">Th.S Nguyễn Thị Thanh Vân</option>
-                        <option value="nttv">Th.S Nguyễn Trần Thi Văn</option>
-                        <option value="nmd">Th.S Nguyễn Minh Đạo</option>
-                        <option value="dtkg">Th.S Đặng Thị Kim Giao</option>
+                        <option value="TS. Dang Thanh Dung">TS. Đặng Thanh Dũng</option>
+                        <option value="Th.S Nguyen Thi Thanh Van">Th.S Nguyễn Thị Thanh Vân</option>
+                        <option value="Th.S Nguyen Tran Thi Van">Th.S Nguyễn Trần Thi Văn</option>
+                        <option value="Th.S Nguyen Minh Dao">Th.S Nguyễn Minh Đạo</option>
+                        <option value="Th.S Dang Thi Kim Giao">Th.S Đặng Thị Kim Giao</option>
+                        <option value="Th.S Tran Cong Tu">Th.S Trần Công Tú</option>
                         </select>
                     </div>
                     

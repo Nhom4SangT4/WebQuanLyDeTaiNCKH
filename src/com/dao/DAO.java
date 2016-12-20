@@ -85,13 +85,13 @@ public class DAO {
 	     return i;
 	}
 	
-	public static int PhanCongPhanBien(String madetai, String gvphanbien, String phongphanbien, String thoigianphanbien) throws SQLException {
-	     Connection conn=connect(); 
+	public static int PhanCongPhanBien(String gvphanbien, String phongphanbien, String thoigianphanbien, String madetai) throws SQLException {
+		Connection conn=connect(); 
 	     PreparedStatement pst = null;  	     
 	     pst = conn.prepareStatement("update dangkydetai set gvphanbien=?, phongphanbien=?, thoigianphanbien=? where madetai=?");
 	     pst.setString(1, gvphanbien);
-	     pst.setString(2, phongphanbien);
-	     pst.setString(3, thoigianphanbien);
+	     pst.setString(2, phongphanbien);  
+	     pst.setString(3, thoigianphanbien); 
 	     pst.setString(4, madetai); 
 	     int i= pst.executeUpdate();
 	     return i;
@@ -120,6 +120,26 @@ public class DAO {
 	     PreparedStatement pst = null;  	     
 	     pst = conn.prepareStatement("update dangkydetai set Comment=? where madetai=?");
 	     pst.setString(1, Comment);  
+	     pst.setString(2, madetai); 
+	     int i= pst.executeUpdate();
+	     return i;
+	}
+	
+	public static int ChamDiem(String diem, String madetai) throws SQLException {
+		Connection conn=connect(); 
+	     PreparedStatement pst = null;  	     
+	     pst = conn.prepareStatement("update dangkydetai set diem=? where madetai=?");
+	     pst.setString(1, diem);  
+	     pst.setString(2, madetai); 
+	     int i= pst.executeUpdate();
+	     return i;
+	}
+	
+	public static int GiaHanHuy(String giahanhuy, String madetai) throws SQLException {
+		Connection conn=connect(); 
+	     PreparedStatement pst = null;  	     
+	     pst = conn.prepareStatement("update dangkydetai set giahanhuy=? where madetai=?");
+	     pst.setString(1, giahanhuy);
 	     pst.setString(2, madetai); 
 	     int i= pst.executeUpdate();
 	     return i;

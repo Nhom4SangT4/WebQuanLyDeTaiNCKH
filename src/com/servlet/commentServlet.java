@@ -41,20 +41,20 @@ public class commentServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
   
-	    String Comment = request.getParameter("txtComment");
-	    String madetai = request.getParameter("txtMa");  
+	    String Comment = request.getParameter("txtcomment");
+	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
 	    	if(DAO.Comment(Comment, madetai)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"Comment Th�nh C�ng!!!\");");  
+	    		out.print("alert(\"Comment Đề Tài Thành Công!!!\");");  
 	    		out.print("</script>");
-	    		RequestDispatcher rd=request.getRequestDispatcher("Comment.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("NT_NghiemThuDeTai.jsp");    
 				    rd.include(request,response); 
 	    	   }
 	    	else
 	    	{
-	    		RequestDispatcher rd=request.getRequestDispatcher("Comment.jsp");    
+	    		RequestDispatcher rd=request.getRequestDispatcher("NT_NghiemThuDeTai.jsp");    
 				    rd.include(request,response); 
 	    	}
 	    		   
