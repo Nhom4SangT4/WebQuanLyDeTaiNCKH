@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -8,7 +10,7 @@
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>::. Home .::</title>
+  <title>::. Danh sách đề tài .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
@@ -21,6 +23,14 @@
   
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, tendetai, hoten, linhvuc, TrangThai from dangkydetai") ; 
+  %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
@@ -69,50 +79,51 @@
                 <div class="col-md-9">
                     <ol class="breadcrumb">
   <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>
- 
-  
   <table class="table" data-page-size="5">
-    	<thead>
+    		<TR align="center">
+              <th align="center" data-hide="phone"><u>Mã Đề Tài</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
+              <th align="center" data-hide="phone,tablet"><u>SVTH</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Lĩnh vực</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Trạng Thái</u></th>
+            </TR>
+    		<% while(resultset.next()){ %>
+            <TR>
+              <TD> <%= resultset.getString(1) %></td>
+                <TD> <%= resultset.getString(2) %></TD>
+                <TD> <%= resultset.getString(3) %></TD>
+                <TD> <%= resultset.getString(4) %></TD>
+                <TD> <%= resultset.getString(5) %></TD>
+                
+              </TR>
+              <% } %>
+    	<tfoot>
     		<tr>
-                <th data="true">STT</th>
-                <th data="true">Mã đề tài</th>
-    			<th data="true">Tên đề tài</th>
-    			<th data="true" style="width: 140px!important;">GVHD</th>
-    			<th data-hide="phone,tablet">Tên Sinh Viên </th>
-                <th data-hide="phone">Chi tiết</th>
+    			<td colspan="6">
+    				<div class="pagination pagination-centered"><ul class="pagination"><li class="active"><a>1</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/2.html">2</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/3.html">3</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/10.html">&raquo;</a></li></ul></div>
+    			</td>
     		</tr>
-    	</thead>
-    	<tbody>
-                                 <tr>
-                                <td><span class="text-info">1</span></td>
-                                <td>IT001</td>
-                                <td>Xây dựng ứng dụng di động bằng React Native</td>
-                                <td>Nguyễn Trần Thi Văn</td>
-                                <td>Nguyễn Văn</td>
-                                <td><div id="spoiler" style="display: none;">
-								<td>
-                                                                        <td><a target="_blank" href="ChiTietDeTai.jsp">Chi tiết</a></td>
-                                </tr>
-								<tr>
-                                <td><span class="text-info">2</span></td>
-                                <td>IT001</td>
-                                <td>Xây dựng ứng dụng di động bằng React Native</td>
-                                <td>Nguyễn Trần Thi Văn</td>
-                                <td>Nguyễn An</td>
-                                <td><div id="spoiler" style="display: none;">
-								<td>
-                                                                        <td><a target="_blank" href="#">Chi tiết</a></td>
-                                </tr>
-                                                    
-								
-
+    	</tfoot>
     </table>
 </div>
-<script>
-
-</script>
-  
-   
+  <div class="well-sm">
+        <span>
+            <span id="random_tin">
+            <i class="icon-bullhorn"></i>&nbsp;
+            <img src="images/bullet-blue-icon.png" />
+                        <small>
+                <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
+                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
+                </a>
+            </small>
+            <img src="images/new1.gif"/>
+            </span>
+           
+        </span>    
+    </div>
+                        
+                    <ol class="breadcrumb">
+  <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
             </div>
         </div>
     </div>
