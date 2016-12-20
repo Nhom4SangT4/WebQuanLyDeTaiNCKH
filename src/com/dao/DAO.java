@@ -144,4 +144,23 @@ public class DAO {
 	     int i= pst.executeUpdate();
 	     return i;
 	}
+	
+	public static int ThongTinSinhVien(String hoten, String mssv, String khoa, String sdt, String socmnd, String nienkhoa, String gioitinh, String diachi, String ngaysinh, String ghichu) throws SQLException {
+		Connection conn=connect(); 
+	     PreparedStatement pst = null;  	     
+	     pst = conn.prepareStatement("update dangkydetai set hoten=?, mssv=?, khoa=?, sdt=?, socmnd=?"
+	     		+ "nienkhoa=?, gioitinh=?, diachi=? ngaysinh=?, ghichu=? where madetai=?");
+	     pst.setString(1, hoten);
+	     pst.setString(2, mssv);  
+	     pst.setString(3, khoa); 
+	     pst.setString(4, sdt);
+	     pst.setString(5, socmnd);
+	     pst.setString(6, nienkhoa);  
+	     pst.setString(7, gioitinh); 
+	     pst.setString(8, diachi);
+	     pst.setString(9, ngaysinh);
+	     pst.setString(10, ghichu);
+	     int i= pst.executeUpdate();
+	     return i;
+	}
 }
