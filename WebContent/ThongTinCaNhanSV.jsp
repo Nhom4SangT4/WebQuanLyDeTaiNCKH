@@ -30,7 +30,7 @@ pageEncoding="utf-8"%>
 
   Statement statement = connection.createStatement() ;
   ResultSet resultset = 
-  statement.executeQuery("select hoten, mssv, khoa, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu from taikhoan where tentaikhoan='sinhvien1'") ; 
+  statement.executeQuery("select hoten, mssv, khoa, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu from taikhoan where mssv='13110062'") ; 
   %>
   <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
    <tbody><tr>

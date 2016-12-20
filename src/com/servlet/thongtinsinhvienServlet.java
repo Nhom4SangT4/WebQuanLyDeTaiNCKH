@@ -40,7 +40,8 @@ public class thongtinsinhvienServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
-	    String hoten = request.getParameter("txtname");    
+  
+	    String hoten = request.getParameter("txthoten");
 	    String mssv = request.getParameter("txtmssv");
 	    String khoa = request.getParameter("txtkhoa");
 	    String sdt = request.getParameter("txtsdt");
@@ -50,10 +51,11 @@ public class thongtinsinhvienServlet extends HttpServlet {
 	    String diachi = request.getParameter("txtdiachi");
 	    String ngaysinh = request.getParameter("txtngaysinh");
 	    String ghichu = request.getParameter("txtghichu");
+	   
 	    try{
 	    	if(DAO.ThongTinSinhVien(hoten, mssv, khoa, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"Đăng Ký Thành Công!!!\");");  
+	    		out.print("alert(\"Cập nhật thành công!!!\");");  
 	    		out.print("</script>");
 	    		RequestDispatcher rd=request.getRequestDispatcher("ThongTinCaNhanSV.jsp");    
 				    rd.include(request,response); 

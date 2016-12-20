@@ -149,7 +149,7 @@ public class DAO {
 		Connection conn=connect(); 
 	     PreparedStatement pst = null;  	     
 	     pst = conn.prepareStatement("update dangkydetai set hoten=?, mssv=?, khoa=?, sdt=?, socmnd=?"
-	     		+ "nienkhoa=?, gioitinh=?, diachi=? ngaysinh=?, ghichu=? where madetai=?");
+	     		+ "nienkhoa=?, gioitinh=?, diachi=? ngaysinh=?, ghichu=? where mssv=?");
 	     pst.setString(1, hoten);
 	     pst.setString(2, mssv);  
 	     pst.setString(3, khoa); 
