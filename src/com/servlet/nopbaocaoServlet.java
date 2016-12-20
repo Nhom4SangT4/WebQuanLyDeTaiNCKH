@@ -40,12 +40,12 @@ public class nopbaocaoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");    
 	    PrintWriter out = response.getWriter();  
-  
+	    String TrangThai = request.getParameter("txttrangthai");
 	    String linknopbai = request.getParameter("txtlinknopbai");
 	    String madetai = request.getParameter("txtmadetai");  
 	   
 	    try{
-	    	if(DAO.NopBaoCao(linknopbai, madetai)>0){ 
+	    	if(DAO.NopBaoCao(TrangThai,linknopbai, madetai)>0){ 
 	    		out.print("<script>");
 	    		out.print("alert(\"Nộp Bài Thành Công!!!\");");  
 	    		out.print("</script>");

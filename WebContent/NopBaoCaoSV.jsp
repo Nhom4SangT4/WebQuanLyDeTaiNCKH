@@ -123,15 +123,22 @@ pageEncoding="utf-8"%>
                       <lable for="txtmadetai" class="control-lable"><strong>Mã đề tài </strong></lable>
                       <input  type="text" name="txtmadetai" id="txtmadetai" class="form-control" tabindex="1" placeholder="Mã số đề tài" required>
                     </div>
+                    
+                    <div class="form-group">
+                      <lable for="txttrangthai" class="control-lable">Trạng thái </lable>
+                      <select name="txttrangthai" id="txttrangthai" class="form-control" tabindex="2" required>
+                        <option value="CHO PHAN BIEN">Chờ Phản biện</option>
+                        </select>
+                    </div>
 
                     <div class="form-group">
                       <lable for="txtlinknopbai" class="control-lable">Link nộp bài </lable>
-                      <input type="text" name="txtlinknopbai" id="txtlinknopbai" class="form-control" tabindex="2" placeholder="Đường dẫn file báo cáo (File được Upload lên GoogleDrive)" required>
+                      <input type="text" name="txtlinknopbai" id="txtlinknopbai" class="form-control" tabindex="3" placeholder="Đường dẫn file báo cáo (File được Upload lên GoogleDrive)" required>
                     </div>
 
                     <div class="text-center">
-                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="3" value="Xác nhận nộp">
-                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary" tabindex="4"  value="Nhập lại">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="4" value="Xác nhận nộp">
+                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary" tabindex="5"  value="Nhập lại">
                     </div>
                   </div> 
                 </table>
