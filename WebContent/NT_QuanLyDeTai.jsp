@@ -46,9 +46,21 @@ pageEncoding="utf-8"%>
     
     			<li><a href="DangNhap.jsp">Đăng Xuất</a></li>
 				</ul>
-					</div>
-				</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
-					<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
+				<div class="search">
+					<div style=";width:300px; " id="imaginary_container ">
+                                                 <div class="input-group stylish-input-group">
+                                                           <input type="text " id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Tìm kiếm đề tài">
+                                                           <span class="input-group-addon ">
+                                                                        <button type="submit" id="tkiem">
+                                                                        <span class="glyphicon glyphicon-search "></span>
+                                                          		</button>
+                                                           		</span>
+                                                  </div>
+
+                                          </div>
+				</div>
+			</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+		<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
 </span></marquee>
 
 				</div></div>
