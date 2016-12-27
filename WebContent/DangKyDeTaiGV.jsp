@@ -34,7 +34,7 @@ pageEncoding="utf-8"%>
 					<div class="sup_menu">
 				<ul>
     
-    			<li><a href="DangNhap.jsp">Đăng Xuất</a></li>
+    			<li><a href="logout.jsp">Đăng Xuất</a></li>
 				</ul>
 					</div>
 				</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>

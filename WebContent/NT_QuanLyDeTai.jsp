@@ -44,7 +44,7 @@ pageEncoding="utf-8"%>
 					<div class="sup_menu">
 				<ul>
     
-    			<li><a href="DangNhap.jsp">Đăng Xuất</a></li>
+    			<li><a href="logout.jsp">Đăng Xuất</a></li>
 				</ul>
 				<div class="search">
 					<div style=";width:300px; " id="imaginary_container ">
