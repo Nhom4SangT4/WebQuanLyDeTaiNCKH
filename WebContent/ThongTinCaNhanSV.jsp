@@ -2,6 +2,8 @@
 pageEncoding="utf-8"%>
 <%@ page import="java.sql.*" %>
 <% Class.forName("com.mysql.jdbc.Driver"); %>
+<%@ page import="java.sql.*" %>
+<%@ page import="mypack.Kiemtra" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -28,9 +30,8 @@ pageEncoding="utf-8"%>
   Connection connection = DriverManager.getConnection(
     "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
 
-  Statement statement = connection.createStatement() ;
-  ResultSet resultset = 
-  statement.executeQuery("select hoten, mssv, khoa, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu from taikhoan where mssv='13110062'") ; 
+Statement statement = connection.createStatement() ;
+//ResultSet resultset = statement.executeQuery("select hoten, mssv, khoa, sdt, socmnd, nienkhoa, gioitinh, diachi, ngaysinh, ghichu from taikhoan where tentaikhoan="+Kiemtra.tentaikhoan+"") ; 
   %>
   <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
    <tbody><tr>
@@ -71,7 +72,7 @@ pageEncoding="utf-8"%>
                 <h4 id="mobile_home">Danh Mục</h4>   
               </div>
               	<a href="HomeSinhVien.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
-              	<a href="ThongTinCaNhanSV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông Tin Cá Nhân</a>
+              	<a href="ThongTinCaNhanSV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông Tin Cá Nhân <% out.print("<td >" + Kiemtra.hoten +"</td>"); %></a>
               	<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
               	<a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
               	<a href="GiaHan-HuyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Gia hạn-hủy Đề Tài</a>            
@@ -89,52 +90,52 @@ pageEncoding="utf-8"%>
               </span>
               <div class="panel panel-default">
               <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
-                <center><h1>THÔNG TIN CÁ NHÂN</h1></center>
+                <center><h1>THÔNG TIN CÁ NHÂN <% out.print("<td>"+ Kiemtra.hoten +"</td>"); %></h1></center>
               </div>
               <center><p class="note"><span class="req">**********</span></p></center>
   <table class="table" data-page-size="5">
-  <% while(resultset.next()){ %>
+  
     		<TR">
               <th align="center" data-hide="phone,tablet">Họ và tên </th>
-              <TD> <%= resultset.getString(1) %></td>
+              <TD> <% out.print("<td>"+ Kiemtra.hoten +"</td>"); %></td>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Mã số sinh viên </th>
-              <TD> <%= resultset.getString(2) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.mssv +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Khoa </th>
-              <TD> <%= resultset.getString(3) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.khoa +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Số điện thoại</th>
-              <TD> <%= resultset.getString(4) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.sdt +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Số CMND</th>
-              <TD> <%= resultset.getString(5) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.socmnd +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Niên khóa</th>
-              <TD> <%= resultset.getString(6) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.nienkhoa +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Giới tính</th>
-              <TD> <%= resultset.getString(7) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.gioitinh +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Địa chỉ</th>
-              <TD> <%= resultset.getString(8) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.diachi +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Ngày sinh</th>
-              <TD> <%= resultset.getString(9) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.ngaysinh +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Ghi chú cá nhân</th>
-              <TD> <%= resultset.getString(10) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.ghichu +"</td>"); %></TD>
             </TR>
-              <% } %>
+            
 </div>
     </table>
     <div>
@@ -150,7 +151,7 @@ pageEncoding="utf-8"%>
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Chỉnh sửa thông tin cá nhân</h4>
+          <h4 class="modal-title">Cập nhật thông tin cá nhân</h4>
         </div>
         <form id="contactform" name="contact" action="thongtinsinhvienServlet" method="post">
         <div class="panel-body">
