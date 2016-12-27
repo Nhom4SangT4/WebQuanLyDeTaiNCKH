@@ -16,11 +16,13 @@
 	  ResultSet quyen = sta.executeQuery(query);
 	  if(quyen.next())
 	  {	  
-		  session.setAttribute("userName", id);
+		 
 		  if(quyen.getString("Nhom").equals("0"))
 		  {
+			  session.setAttribute("txtid", id);
+			  String name = (String)session.getAttribute("txtid");
 			  out.print("<script>");
-			  out.print("alert(\"Đăng Nhập Thành Công!!!\");");  
+			  out.print("alert(\"Đăng Nhập Thành Công!!!"+name+"\");");  
 	    	  out.print("</script>");
 	    	  out.println("<script type=\"text/javascript\">");				
 			  out.println("location='PhanQuyenTaiKhoan.jsp'");
