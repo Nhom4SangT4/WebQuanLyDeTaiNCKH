@@ -2,6 +2,8 @@
 pageEncoding="utf-8"%>
 <%@ page import="java.sql.*" %>
 <% Class.forName("com.mysql.jdbc.Driver"); %>
+<%@ page import="java.sql.*" %>
+<%@ page import="mypack.Kiemtra" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -29,8 +31,7 @@ pageEncoding="utf-8"%>
     "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
 
   Statement statement = connection.createStatement() ;
-  ResultSet resultset = 
-  statement.executeQuery("select hoten, khoa, sdt, socmnd, gioitinh, diachi, ngaysinh, ghichu from taikhoan where tentaikhoan='nghiemthu1'") ; 
+  //ResultSet resultset = statement.executeQuery("select hoten, khoa, sdt, socmnd, gioitinh, diachi, ngaysinh, ghichu from taikhoan where tentaikhoan='nghiemthu1'") ; 
   %>
   <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
    <tbody><tr>
@@ -81,7 +82,7 @@ pageEncoding="utf-8"%>
         </div>
           <div class="col-md-9">
                     <ol class="breadcrumb">
-  <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>
+  <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân <% out.print("<td>"+ Kiemtra.hoten +"</td>"); %></li></ol>
   <span>
               <span id="random_tin">
                 <i class="icon-bullhorn"></i>&nbsp;
@@ -89,44 +90,43 @@ pageEncoding="utf-8"%>
               </span>
               <div class="panel panel-default">
               <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
-                <center><h1>THÔNG TIN CÁ NHÂN</h1></center>
+                <center><h1>THÔNG TIN CÁ NHÂN <% out.print("<td>"+ Kiemtra.hoten +"</td>"); %></h1></center>
               </div>
               <center><p class="note"><span class="req">**********</span></p></center>
   <table class="table" data-page-size="5">
-  <% while(resultset.next()){ %>
+  
     		<TR">
               <th align="center" data-hide="phone,tablet">Họ và tên </th>
-              <TD> <%= resultset.getString(1) %></td>
+              <TD> <% out.print("<td>"+ Kiemtra.hoten +"</td>"); %></td>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Khoa </th>
-              <TD> <%= resultset.getString(2) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.khoa +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Số điện thoại</th>
-              <TD> <%= resultset.getString(3) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.sdt +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Số CMND</th>
-              <TD> <%= resultset.getString(4) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.socmnd +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Giới tính</th>
-              <TD> <%= resultset.getString(5) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.gioitinh +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Địa chỉ</th>
-              <TD> <%= resultset.getString(6) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.diachi +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Ngày sinh</th>
-              <TD> <%= resultset.getString(7) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.ngaysinh +"</td>"); %></TD>
             </TR>
             <TR>
               <th align="center" data-hide="phone,tablet">Ghi chú cá nhân</th>
-              <TD> <%= resultset.getString(8) %></TD>
+              <TD> <% out.print("<td>"+ Kiemtra.ghichu +"</td>"); %></TD>
             </TR>
-              <% } %>
 </div>
     </table>
     <div>
@@ -238,7 +238,19 @@ pageEncoding="utf-8"%>
  </div>
 </div>
   <div class="well-sm">
-        
+        <span>
+            <span id="random_tin">
+            <i class="icon-bullhorn"></i>&nbsp;
+            <img src="images/bullet-blue-icon.png" />
+                        <small>
+                <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
+                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
+                </a>
+            </small>
+            <img src="images/new1.gif"/>
+            </span>
+           
+        </span>    
     </div>
             <ol class="breadcrumb">
               <li><a href="#">Home</a></li><li class="active">Thông tin cá nhân</li></ol>               </div>
