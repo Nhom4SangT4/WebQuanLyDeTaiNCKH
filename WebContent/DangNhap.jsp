@@ -49,22 +49,7 @@
 		<div class="panel panel-default">
 		<div class="panel-heading">
 		<h3 class = "panel-title"><h2>Đăng nhập<h2></h3>
-				<tr>
-                    <td align="center" colspan="20">
-                        <table cellpadding="0" cellspacing="0" class="loginmodule_table_Bottom_dl" width="125%">
-                            <tr class="loginmodule_header_dl">
-								<td style="height: 10px">
-                                    <input id="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnAdmin" type="radio" name="ctl00$ContentPlaceHolder1$ctl00$ctl00$Role" value="rbtnAdmin" checked="checked" /><label for="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnStudent ">Admin</label>
-                                <td style="height: 10px">
-                                    <input id="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnStudent" type="radio" name="ctl00$ContentPlaceHolder1$ctl00$ctl00$Role" value="rbtnStudent"  /><label for="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnStudent "> Sinh viên</label>
-                                <td style="height: 10px">
-                                    <input id="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnProfessor" type="radio" name="ctl00$ContentPlaceHolder1$ctl00$ctl00$Role" value="rbtnProfessor" /><label for="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnProfessor "> Giảng viên</label></td>
-                                <td style="height: 10px">
-                                    <input id="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnPrincipal" type="radio" name="ctl00$ContentPlaceHolder1$ctl00$ctl00$Role" value="rbtnPrincipal" /><label for="ctl00_ContentPlaceHolder1_ctl00_ctl00_rbtnPrincipal "> Hội đồng kiểm định</label></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
+				
 		</div>
 		
 		<form class="form-horizontal" role="qldtnckh" action="Login.jsp" method="post">

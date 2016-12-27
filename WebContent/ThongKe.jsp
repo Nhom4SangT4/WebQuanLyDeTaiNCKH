@@ -58,28 +58,20 @@
         
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
-       	
-		<a href="ThongKe.jsp" class="list-group-item active"><span class="pull-right"></span>Thống Kê</a>
-		<a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a>       
+       	 <a href="HomeDuyetDT.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
+                            <a href="ThongtincanhanGV.jsp" class="list-group-item "><span class="pull-right"></span>Thông tin cá nhân</a>
+                            <a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
+                            <a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý đề tài của tôi</a>
+                            <a href="ThongKe.jsp" class="list-group-item active "><span class="pull-right"></span>Thống Kê</a>
+                            <a href="GV_QuanLyDeTaiDuocPhanCong.jsp" class="list-group-item "><span class="pull-right"></span>Quản lý đề tài được phân công</a>
+                            <a href="#" class="list-group-item "><span class="pull-right"></span>Liên Hệ</a> 
     </div>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <ol class="breadcrumb">
   <li><a href="#">Home</a></li><li class="active">Thống Kê</li></ol>    <div class="well-sm">
-        <span>
-            <span id="random_tin">
-            <i class="icon-bullhorn"></i>&nbsp;
-            <img src="images/bullet-blue-icon.png" />
-                        <small>
-                <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
-                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
-                </a>
-            </small>
-            <img src="images/new1.gif"/>
-            </span>
-           
-        </span>    
+        
     </div>
                         <div class="panel panel-default">
                         <div  style="color: rgb(7, 132, 163);" class="panel-heading">

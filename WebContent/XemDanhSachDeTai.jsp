@@ -98,26 +98,12 @@ pageEncoding="utf-8"%>
               </TR>
               <% } %>
     	<tfoot>
-    		<tr>
-    			<td colspan="6">
-    				<div class="pagination pagination-centered"><ul class="pagination"><li class="active"><a>1</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/2.html">2</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/3.html">3</a></li><li><a href="http://dkdt.fit.hcmute.edu.vn/danh-sach-de-tai/44/page/10.html">&raquo;</a></li></ul></div>
-    			</td>
-    		</tr>
+    		
     	</tfoot>
     </table>
 </div>
   <div class="well-sm">
-        <span>
-            <span id="random_tin">
-            <i class="icon-bullhorn"></i>&nbsp;
-            <img src="images/bullet-blue-icon.png" />
-                        <small>
-                <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
-                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
-                </a>
-            </small>
-            <img src="images/new1.gif"/>
-            </span>
+        <
            
         </span>    
     </div>
