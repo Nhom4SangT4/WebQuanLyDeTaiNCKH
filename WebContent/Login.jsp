@@ -35,8 +35,10 @@
 	       session.setAttribute("tentaikhoan", id);
 		  if(rs.getString("Nhom").equals("0"))
 		  {
+			  session.setAttribute("tentaikhoan", id);
+			  String name=(String) session.getAttribute("tentaikhoan");
 			  out.print("<script>");
-			  out.print("alert(\"Đăng Nhập Thành Công!!!\");");  
+			  out.print("alert(\"Đăng Nhập Thành Công!!!"+name+"\");");  
 	    	  out.print("</script>");
 	    	  out.println("<script type=\"text/javascript\">");				
 			  //out.println("location='PhanQuyenTaiKhoan.jsp'");
@@ -48,8 +50,10 @@
 		  }
 		  if(rs.getString("Nhom").equals("1"))
 		  {
+			  session.setAttribute("tentaikhoan", id);
+			  String name=(String) session.getAttribute("tentaikhoan");
 			  out.print("<script>");
-			  out.print("alert(\"Đăng Nhập Thành Công!!!\");");  
+			  out.print("alert(\"Đăng Nhập Thành Công!!!"+name+"\");");  
 	    	  out.print("</script>");
 	    	  out.println("<script type=\"text/javascript\">");				
 			  //out.println("location='HomeSinhVien.jsp'");
@@ -59,8 +63,10 @@
 		  }
 		  if(rs.getString("Nhom").equals("2"))
 		  {
+			  session.setAttribute("tentaikhoan", id);
+			  String name=(String) session.getAttribute("tentaikhoan");
 			  out.print("<script>");
-			  out.print("alert(\"Đăng Nhập Thành Công!!!\");");  
+			  out.print("alert(\"Đăng Nhập Thành Công!!!"+name+"\");");  
 	    	  out.print("</script>");
 	    	  out.println("<script type=\"text/javascript\">");				
 			  //out.println("location='HomeDuyetDT.jsp'");
@@ -71,8 +77,10 @@
 		  }
 		  if(rs.getString("Nhom").equals("3"))
 		  {
+			  session.setAttribute("tentaikhoan", id);
+			  String name=(String) session.getAttribute("tentaikhoan");
 			  out.print("<script>");
-			  out.print("alert(\"Đăng Nhập Thành Công!!!\");");  
+			  out.print("alert(\"Đăng Nhập Thành Công!!!"+name+"\");");  
 	    	  out.print("</script>");
 	    	  out.println("<script type=\"text/javascript\">");				
 			  //out.println("location='HomeNghiemThu.jsp'");
