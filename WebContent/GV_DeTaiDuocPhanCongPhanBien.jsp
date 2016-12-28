@@ -154,6 +154,34 @@
               </form>
               
             </div>
+            
+            <div class="panel panel-default">
+              <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h3>ĐÁNH GIÁ ĐỀ TÀI</h3></center>
+              </div>
+  					<table border="0" cellpadding="0" cellspacing="0">
+  					
+              <form id="contactform" name="contact" action="commentServlet" method="post">
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <lable for="txtmadetai" class="control-lable"><strong>Mã đề tài </strong></lable>
+                      <input  type="text" name="txtmadetai" id="txtmadetai" class="form-control" tabindex="1" placeholder="Mã đề tài" required>
+                    </div>
+
+					<div class="form-group">
+                      <lable for="txtcomment" class="control-lable"><strong>Comment đề tài </strong></lable>
+                      <textarea  type="text" name="txtcomment" rows="5" id="txtcomment" class="form-control" tabindex="2" placeholder="Comment đề tài" required></textarea>
+                    </div>
+
+                    <div class="text-center">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="3" value="Xác nhận">
+                    </div>
+                  </div> 
+                </table>
+              </form>
+              
+            </div>
   <div class="well-sm">
         <span>
             <span id="random_tin">

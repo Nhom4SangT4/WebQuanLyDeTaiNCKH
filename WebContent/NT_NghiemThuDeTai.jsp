@@ -35,7 +35,7 @@
 
             Statement statement = connection.createStatement() ;
             ResultSet resultset = 
-                statement.executeQuery("select madetai, tendetai, hoten, diem, Comment from dangkydetai where TrangThai='CHO PHAN BIEN' and diem is not null") ; 
+                statement.executeQuery("select madetai, tendetai, hoten, diem, Comment, xeploai from dangkydetai where TrangThai='CHO PHAN BIEN' and diem is not null") ; 
      %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
@@ -107,6 +107,7 @@
                       <th align="center" data-hide="phone,tablet"><u>SVTH</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Điểm</u></th>
                       <th align="center" data-hide="phone,tablet"><u>Nhận xét</u></th>
+                      <th align="center" data-hide="phone,tablet"><u>Xếp loại</u></th>
             </TR>
             <% while(resultset.next()){ %>
             <TR>
@@ -115,6 +116,7 @@
                 <TD> <%= resultset.getString(3) %></TD>
                 <TD> <%= resultset.getString(4) %></TD>
                 <TD> <%= resultset.getString(5) %></TD>
+                <TD> <%= resultset.getString(6) %></TD>
             </TR>
             <% } %>
         </TABLE>
@@ -127,7 +129,7 @@
               </div>
   					<table border="0" cellpadding="0" cellspacing="0">
   					
-              <form id="contactform" name="contact" action="commentServlet" method="post">
+              <form id="contactform" name="contact" action="xeploaiServlet" method="post">
                 <table border="0" cellpadding="0" cellspacing="0">
                   <div class="panel-body">
                     <div class="form-group">
@@ -136,8 +138,13 @@
                     </div>
 
 					<div class="form-group">
-                      <lable for="txtcomment" class="control-lable"><strong>Comment đề tài </strong></lable>
-                      <textarea  type="text" name="txtcomment" rows="5" id="txtcomment" class="form-control" tabindex="2" placeholder="Comment đề tài" required></textarea>
+                      <lable for="txtxeploai" class="control-lable">Xếp loại </lable>
+                      <select name="txtxeploai" id="txtxeploai" class="form-control" tabindex="2" required>
+                        <option value="Gioi">Giỏi</option>
+                        <option value="Kha">Khá</option>
+                        <option value="Trung Binh">Trung Bình</option>
+                        <option value="Chua Dat">Chưa Đạt</option>
+                        </select>
                     </div>
 
                     <div class="text-center">
