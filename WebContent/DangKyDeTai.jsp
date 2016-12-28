@@ -121,7 +121,7 @@ pageEncoding="utf-8"%>
                     
                     <div class="form-group">
                       <lable for="txtgvhuongdan" class="control-lable">GV hướng dẫn </lable>
-                      <select name="txtgvhuongdan" id="txtgvhuongdan" class="form-control" tabindex="2" required>
+                      <select name="txtgvhuongdan" id="txtgvhuongdan" class="form-control" tabindex="6" required>
                         <option value="TS. Dang Thanh Dung">TS. Đặng Thanh Dũng</option>
                         <option value="Th.S Nguyen Thi Thanh Van">Th.S Nguyễn Thị Thanh Vân</option>
                         <option value="Th.S Nguyen Tran Thi Van">Th.S Nguyễn Trần Thi Văn</option>
@@ -133,27 +133,27 @@ pageEncoding="utf-8"%>
 
                     <div class="form-group">
                           <label for="txtthoigianbatdau" class="control-label">Thời gian bắt đầu </label>
-                          <input id="txtthoigianbatdau" name="txtthoigianbatdau" min="2000-01-01" type="date" class="txt" tabindex="6" placeholder="mm/dd/yyyy" required/>
+                          <input id="txtthoigianbatdau" name="txtthoigianbatdau" min="2000-01-01" type="date" class="txt" tabindex="7" placeholder="mm/dd/yyyy" required/>
                     </div>
 
 					<div class="form-group">
                           <label for="txtthoigianketthuc" class="control-label">Thời gian kết thúc </label>
-                          <input id="txtthoigianketthuc" name="txtthoigianketthuc" min="2000-01-01" type="date" class="txt" tabindex="7" placeholder="mm/dd/yyyy" required/>
+                          <input id="txtthoigianketthuc" name="txtthoigianketthuc" min="2000-01-01" type="date" class="txt" tabindex="8" placeholder="mm/dd/yyyy" required/>
                     </div>
                     
                     <div class="form-group">
                       <lable for="txtkinhphi" class="control-lable">Kinh phí dự kiến </lable>
-                      <input type="text" name="txtkinhphi" id="txtkinhphi" class="form-control" tabindex="8" placeholder="Kinh phí" required>
+                      <input type="text" name="txtkinhphi" id="txtkinhphi" class="form-control" tabindex="9" placeholder="Kinh phí" required>
                     </div>
 
                     <div class="form-group">
                       <lable for="ghichu" class="control-lable">Ghi chú </lable>
-                      <textarea type="text" rows="5" name="ghichu" id="ghichu" class="form-control" tabindex="9" placeholder="Ghi chú đề tài" required> </textarea>
+                      <textarea type="text" rows="5" name="ghichu" id="ghichu" class="form-control" tabindex="10" placeholder="Ghi chú đề tài" required> </textarea>
                     </div>
 
                     <div class="text-center">
-                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="10" value="Đăng Ký">
-                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary" tabindex="11"  value="Nhập lại">
+                      <input type="submit" id="submitbtn" name="button" class="btn btn-primary" tabindex="11" value="Đăng Ký">
+                      <input type="reset" id="resetbtn" name="reset" class="btn btn-primary" tabindex="12"  value="Nhập lại">
                     </div>
                   </div> 
                 </table>
