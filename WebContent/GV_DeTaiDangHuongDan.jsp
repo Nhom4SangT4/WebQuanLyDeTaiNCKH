@@ -1,11 +1,22 @@
+<%@ page import="mypack.Kiemtra" %> 
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 <% String username = (String)session.getValue("tentaikhoan");
     if(username==null)
     {
     	response.sendRedirect("DangNhap.jsp");
     	
     	}
+  %>
+  <% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, hoten, tendetai, linhvuc from dangkydetai where gvhuongdan='"+Kiemtra.hoten+"'") ; 
   %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -80,41 +91,24 @@
   <h1>Danh sách Đề Tài đang hướng dẫn</h1>
   <table class="table" data-page-size="5">
     	<thead>
-    		<tr>
-                <th data="true">STT</th>
-                <th data="true" style="width: 80px">Mã đề tài</th>
-    			<th data="true" style="width: 200px">Tên đề tài</th>
-    			<th data="true">SVTH</th>
-    			<th data-hide="phone,tablet">Tiến độ</th>
-                <th data-hide="phone">Chi tiết</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-                                                    <tr>
-                                <td><span class="text-info">1</span></td>
-                                <td>IT001</td>
-                                <td>Xây dựng ứng dụng di động bằng React Native</td>
-                                <td>Đặng Ngọc Sơn</td>
-                                <td>30%</td>
-                                                                        <td><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">2</span></td>
-                                <td>IT002</td>
-                                <td>Phát triển ứng dụng đa nền tảng cho điện thoại di động</td>
-                                <td>Ngô Thừa Ân</td>
-                                <td>10%</td>
-                                                                        <td><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                                                    <tr>
-                                <td><span class="text-info">3</span></td>
-                                <td>IT003</td>
-                                <td>Xây dựng ứng dụng quản lý công việc cho Android</td>
-                                <td>Hồ Quang Hiếu</td>
-                                <td>50%</td>
-                                                                        <td><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></td>
-                                                                    </tr>
-                            	</tbody>
+    		
+                              <TR align="center">
+              <th align="center" data-hide="phone"><u>MĐT</u></th>
+              <th align="center" data-hide="phone"><u>Họ Tên</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Lĩnh vực</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Chi Tiết</u></th>
+            </TR>
+    		<% while(resultset.next()){ %>
+            <TR>
+              <TD> <%= resultset.getString(1) %></td>
+                <TD> <%= resultset.getString(2) %></TD>
+                <TD> <%= resultset.getString(3) %></TD>
+                <TD> <%= resultset.getString(4) %></TD>
+                <TD><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></TD>
+                
+              </TR>
+              <% } %>
     	<tfoot>
     		<tr>
     			<td colspan="6">
