@@ -26,19 +26,20 @@ public class DAO {
 		return conn;
 	}
 	
-	public static int DangKyDeTai(String hoten, String mssv, String khoa, String tendetai, String linhvuc, String thoigianbatdau, String thoigianketthuc, String kinhphi, String ghichu) throws SQLException {
+	public static int DangKyDeTai(String hoten, String mssv, String khoa, String tendetai, String linhvuc, String gvhuongdan, String thoigianbatdau, String thoigianketthuc, String kinhphi, String ghichu) throws SQLException {
 	     Connection conn=connect(); 
 	     PreparedStatement pst = null;  	     
-	     pst = conn.prepareStatement("insert into dangkydetai(hoten, mssv, khoa, tendetai, linhvuc, thoigianbatdau, thoigianketthuc, kinhphi, ghichu, TrangThai) values (?,?,?,?,?,?,?,?,?,'CHO DUYET')");
+	     pst = conn.prepareStatement("insert into dangkydetai(hoten, mssv, khoa, tendetai, linhvuc, gvhuongdan, thoigianbatdau, thoigianketthuc, kinhphi, ghichu, TrangThai) values (?,?,?,?,?,?,?,?,?,?,'CHO DUYET')");
 	     pst.setString(1, hoten);  
 	     pst.setString(2, mssv);
 	     pst.setString(3, khoa);  
 	     pst.setString(4, tendetai);
 	     pst.setString(5, linhvuc);
-	     pst.setString(6, thoigianbatdau);
-	     pst.setString(7, thoigianketthuc);
-	     pst.setString(8, kinhphi);
-	     pst.setString(9, ghichu);
+	     pst.setString(6, gvhuongdan);
+	     pst.setString(7, thoigianbatdau);
+	     pst.setString(8, thoigianketthuc);
+	     pst.setString(9, kinhphi);
+	     pst.setString(10, ghichu);
 	     int i= pst.executeUpdate();
 	     return i;
 	}

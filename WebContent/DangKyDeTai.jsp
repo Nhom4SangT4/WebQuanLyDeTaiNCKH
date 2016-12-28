@@ -118,6 +118,18 @@ pageEncoding="utf-8"%>
                       <lable for="txtlinhvuc" class="control-lable">Lĩnh vực </lable>
                       <input type="text" name="txtlinhvuc" id="txtlinhvuc" class="form-control" tabindex="5" placeholder="Lĩnh vực nghiên cứu" required>
                     </div>
+                    
+                    <div class="form-group">
+                      <lable for="txtgvhuongdan" class="control-lable">GV hướng dẫn </lable>
+                      <select name="txtgvhuongdan" id="txtgvhuongdan" class="form-control" tabindex="2" required>
+                        <option value="TS. Dang Thanh Dung">TS. Đặng Thanh Dũng</option>
+                        <option value="Th.S Nguyen Thi Thanh Van">Th.S Nguyễn Thị Thanh Vân</option>
+                        <option value="Th.S Nguyen Tran Thi Van">Th.S Nguyễn Trần Thi Văn</option>
+                        <option value="Th.S Nguyen Minh Dao">Th.S Nguyễn Minh Đạo</option>
+                        <option value="Th.S Dang Thi Kim Giao">Th.S Đặng Thị Kim Giao</option>
+                        <option value="Th.S Tran Cong Tu">Th.S Trần Công Tú</option>
+                        </select>
+                    </div>
 
                     <div class="form-group">
                           <label for="txtthoigianbatdau" class="control-label">Thời gian bắt đầu </label>

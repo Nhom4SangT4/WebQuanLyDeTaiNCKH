@@ -54,14 +54,7 @@ pageEncoding="utf-8"%>
 				</ul>
 				<div class="search">
 					<div style=";width:300px; " id="imaginary_container ">
-                                                 <div class="input-group stylish-input-group">
-                                                           <input type="text " id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Tìm kiếm đề tài">
-                                                           <span class="input-group-addon ">
-                                                                        <button type="submit" id="tkiem">
-                                                                        <span class="glyphicon glyphicon-search "></span>
-                                                          		</button>
-                                                           		</span>
-                                                  </div>
+                                                 
 
                                           </div>
 				</div>
@@ -97,6 +90,19 @@ pageEncoding="utf-8"%>
                 <div class="col-md-9">
                     <ol class="breadcrumb">
   <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>
+  <div class="input-group stylish-input-group">
+       <input type="text " id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Tìm kiếm đề tài">
+       <span class="input-group-addon ">
+              <button type="submit" id="tkiem">
+              		<span class="glyphicon glyphicon-search "></span>
+              </button>
+       </span>
+  </div>
+  
+  <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
+                <center><h1>DANH SÁCH ĐỀ TÀI</h1></center>
+              </div>
+  
   <table class="table" data-page-size="5">
     		<TR align="center">
               <th align="center" data-hide="phone"><u>Mã Đề Tài</u></th>

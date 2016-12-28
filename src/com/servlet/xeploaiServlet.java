@@ -47,7 +47,7 @@ public class xeploaiServlet extends HttpServlet {
 	    try{
 	    	if(DAO.XepLoai(xeploai, madetai)>0){ 
 	    		out.print("<script>");
-	    		out.print("alert(\"Xếp Loại Thành Công!!!\");");  
+	    		out.print("alert(\"Xếp Loại Đề Tài Thành Công!!!\");");  
 	    		out.print("</script>");
 	    		RequestDispatcher rd=request.getRequestDispatcher("NT_NghiemThuDeTai.jsp");    
 				    rd.include(request,response); 
