@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+pageEncoding="utf-8"%>
+<%@ page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
+<%@ page import="java.sql.*" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -21,6 +24,13 @@
   
 </head>
 <body>
+<% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai, hoten,mssv, khoa,tendetai,linhvuc,thoigianbatdau,thoigianketthuc,kinhphi,ghichu,gvhuongdan,gvphanbien,diem  from dangkydetai where madetai='16'") ; 
+  %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
 	<tbody><tr>
 		<td colspan="2"><div id="pnTop">
@@ -77,57 +87,60 @@
                         <div class="panel-body">
                             <div id="detail">
     <table class="table table-hover">
-        <tr>
-            <td>Tên đề tài</td>
-            <td>Xây dựng ứng dụng di động bằng React Native</td>
-        </tr>
-        <tr>     
-            <td>Mục tiêu</td>
-            <td></td>
-        </tr>
-        <tr>   
-            <td>Yêu cầu</td>
-            <td></td>
-        </tr> 
-        <tr>       
-            <td>Sản phẩm</td>
-            <td>Tài liệu báo cáo, chương trình minh họa</td>
-        </tr> 
-        <tr>     
-            <td>Chú thích</td>
-            <td></td>
-        </tr>   
-        <tr>     
-            <td>Lĩnh vực</td>
-            <td>Phần Mềm</td>
-        </tr>   
-        <tr>  
-            <td>Trạng thái</td>
-            <td>Chờ nghiệm thu</td>
-        </tr>    
-        <tr>     
-            <td>Thời gian thực hiện</td>
-            <td>2015</td>
-        </tr>   
-        <tr>       
-            <td>Trưởng nhóm</td>
-            <td>Nguyễn Văn A</td>
-        </tr> 
-        <tr>        
-            <td>Thành viên</td>
-            <td>Trần Thị B</td>
-        </tr>
-        <tr>  
-            <td>GV hướng dẫn </td>
-            <td>Nguyễn Trần Thi Văn</td>
-        </tr>    
-        <tr class="warning">       
-            <td>GV phản biện</td>
-            <td>
-                        </td>   
-        </tr>
-        <tr>
-            
+    <% while(resultset.next()){ %>
+    		<TR">
+              <th align="center" data-hide="phone,tablet">Mã đề tài </th>
+              <TD> <%= resultset.getString(1) %></TD>
+            </TR>
+        	<TR">
+              <th align="center" data-hide="phone,tablet">SVTH </th>
+              <TD> <%= resultset.getString(2) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Mã số sinh viên </th>
+              <TD> <%= resultset.getString(3) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Khoa </th>
+              <TD> <%= resultset.getString(4) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Tên đề tài</th>
+              <TD> <%= resultset.getString(5) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Lĩnh vực</th>
+              <TD> <%= resultset.getString(6) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Thời gian bắt đầu</th>
+              <TD> <%= resultset.getString(7) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Thời gian kết thúc</th>
+              <TD> <%= resultset.getString(8) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Kinh phí</th>
+              <TD> <%= resultset.getString(9) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Ghi chú</th>
+              <TD> <%= resultset.getString(10) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">GV hướng dẫn</th>
+              <TD> <%= resultset.getString(11) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">GV Phản biện</th>
+              <TD> <%= resultset.getString(12) %></TD>
+            </TR>
+            <TR>
+              <th align="center" data-hide="phone,tablet">Điểm</th>
+              <TD> <%= resultset.getString(13) %></TD>
+            </TR>
+            <% } %>
         <tr>
             <td colspan="2" style="text-align: center;"><button id="back" type="button" class="btn btn-info">Quay về</button></td>
         </tr>

@@ -184,7 +184,7 @@ pageEncoding="utf-8"%>
                 <TD> <%= resultset.getString(4) %></TD>
                 <TD> <%= resultset.getString(5) %></TD>
                 <TD> <%= resultset.getString(6) %></TD>
-                <TD><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></TD>
+                <TD><a target="_blank" href="Chitietdetai id=16.jsp" class="btn btn-success btn-xs">Chi tiết</a></TD>
                 
               </TR>
               <% } %>
