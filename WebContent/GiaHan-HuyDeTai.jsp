@@ -74,12 +74,13 @@
         
             <h4 id="mobile_home">Danh Mục</h4>   
         </div>
-       	<a href="HomeSinhVien.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
-              <a href="ThongTinCaNhanSV.jsp" class="list-group-item "><span class="pull-right"></span>Thông Tin Cá Nhân</a>
-              <a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
-              <a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
-              <a href="GiaHan-HuyDeTai.jsp" class="list-group-item active"><span class="pull-right"></span>Gia Hạn-Hủy Đề Tài</a>
-              <a href="NopBaoCaoSV.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>     
+       	<a href="HomeSinhVien.jsp" class="list-group-item "><span class="pull-right"></span>Trang Chủ</a>
+		<a href="ThongTinCaNhanSV.jsp" class="list-group-item"><span class="pull-right"></span>Thông Tin Cá Nhân</a>
+		<a href="DangKyDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Đăng kí Đề Tài</a>
+		<a href="TinhTrangDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Tình Trạng Đề Tài</a>
+		<a href="GiaHan-HuyDeTai.jsp" class="list-group-item active"><span class="pull-right"></span>Gia Hạn - Hủy Đề Tài</a>
+		<a href="NopBaoCaoSV.jsp" class="list-group-item"><span class="pull-right"></span>Nộp Báo Cáo</a>
+		<a href="DanhSachCacDeTaiDaNghiemThu.jsp" class="list-group-item"><span class="pull-right"></span>Xem Đề Tài Đã Nghiệm Thu</a>
     </div>
                     </div>
                 </div>

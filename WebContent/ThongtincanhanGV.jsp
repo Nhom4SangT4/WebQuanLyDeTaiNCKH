@@ -77,6 +77,7 @@ pageEncoding="utf-8"%>
 
                 <h4 id="mobile_home">Danh Mục</h4>   
               </div>
+              	<a href="HomeDuyetDT.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
               	<a href="ThongtincanhanGV.jsp" class="list-group-item active"><span class="pull-right"></span>Thông tin cá nhân</a>
        			<a href="XemDanhSachDeTai.jsp" class="list-group-item"><span class="pull-right"></span>Xem danh sách đề tài</a>
 				<a href="QuanLy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý đề tài</a>

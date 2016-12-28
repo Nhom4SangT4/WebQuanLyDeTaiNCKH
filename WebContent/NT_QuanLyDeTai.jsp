@@ -1,3 +1,4 @@
+<%@ page import="mypack.Kiemtra" %> 
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
 <%@ page import="java.sql.*" %>
@@ -9,6 +10,14 @@ pageEncoding="utf-8"%>
     	
     	}
   %>
+  <% 
+  Connection connection = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
+
+  Statement statement = connection.createStatement() ;
+  ResultSet resultset = 
+  statement.executeQuery("select madetai,tendetai,hoten,gvhuongdan,linhvuc,TrangThai from dangkydetai ") ; 
+  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -16,108 +25,164 @@ pageEncoding="utf-8"%>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>::. Danh sách đề tài .::</title>
+  <title>::. Home .::</title>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/bootstrap.min.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/style.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.core.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/footable.standalone.css" />
   <link rel="stylesheet" media="all" type="text/css" href="CSS/font-awesome.min.css"/>
   <link rel="stylesheet" media="all" type="text/css" href="CSS/main.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="js/jquery-3.1.1.min.js"></script>
   <script type="js/footable.js"></script>
   <script type="js/my_script.js"></script>
   
 </head>
 <body>
-<% 
-  Connection connection = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/qldtnckh", "root", "123456");
-
-  Statement statement = connection.createStatement() ;
-  ResultSet resultset = 
-  statement.executeQuery("select madetai, tendetai, hoten, linhvuc, TrangThai from dangkydetai") ; 
-  %>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
-	<tbody><tr>
-		<td colspan="2"><div id="pnTop">
-			<div id="pnTopDisplay" style="width:1000px;float:left;
-">
-				<div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
-					<div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
-					</div>
+     <tbody><tr>
+      <td colspan="2"><div id="pnTop">
+       <div id="pnTopDisplay" style="width:1000px;float:left;
+       ">
+       <div id="ctl05_portlet_1cfe540a-31bb-41fd-a3b8-367e8dd6581a" style="width:775px;float:left;padding:15px 0px 0px 0px;">
+         <div class="logo_ute"><a href="#"><img alt="" src="images/skpt_banner_2.jpg"></a><br>
+         </div>
 
-				</div><div>
-					<div class="sup_menu">
-				<ul>
-    
-    			<li><a href="logout.jsp">Đăng Xuất</a></li>
-				</ul>
-				<div class="search">
-					<div style=";width:300px; " id="imaginary_container ">
-                                                 
+     </div><div>
+     <div class="sup_menu">
+        <ul>
 
-                                          </div>
-				</div>
-			</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
-		<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
+           <li><a href="logout.jsp">Đăng Xuất</a></li>
+       </ul>
+   </div>
+</div><div id="ctl05_portlet_9b8ba9cf-dd1c-4b80-91fe-8787110cd93b" style="padding:10px 0px 0px 0px;width:1000px;float:left"><div>
+<marquee direction="right"><span style="text-align: left; font-size: 20px; font-family: arial; color: #ff0000;"><a href="#">ĐĂNG KÝ ĐỀ TÀI NGHIÊN CỨU KHOA HỌC</a>
 </span></marquee>
 
-				</div></div>
-			</div>
-		</div></td>
-	</tr>
+</div></div>
+</div>
+</div></td>
+</tr>
 </tbody></table>   
-       <div id="wrapper">
-        <div class="container">
-            <div class="row">
-                <div id="left-content">
-                    <div class="col-md-3">
-                        <!-- Menu desktop -->
-                        <div id="desktop-menu">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-        
-            <h4 id="mobile_home">Danh Mục</h4>   
-        </div>
-       	<a href="HomeNghiemThu.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
+<div id="wrapper">
+    <div class="container">
+        <div class="row">
+            <div id="left-content">
+                <div class="col-md-3">
+                    <!-- Menu desktop -->
+                    <div id="desktop-menu">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                                <h4 id="mobile_home">Danh Mục</h4>   
+                            </div>
+                            <a href="HomeNghiemThu.jsp" class="list-group-item"><span class="pull-right"></span>Trang Chủ</a>
 			<a href="NT_QuanLyDeTai.jsp" class="list-group-item active"><span class="pull-right"></span>Quản Lý Đề Tài</a>
 			<a href="NT_PhanCongPhanBien.jsp" class="list-group-item"><span class="pull-right"></span>Phân Công Phản Biện </a>
 			<a href="NT_GiaHanHuy.jsp" class="list-group-item "><span class="pull-right"></span>Quản Lý Gia hạn-Hủy</a>
 			<a href="NT_NghiemThuDeTai.jsp" class="list-group-item "><span class="pull-right"></span>Đánh Giá Đề Tài </a>
-    </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <ol class="breadcrumb">
-  <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>
-  <div class="input-group stylish-input-group">
-       <input type="text " id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Tìm kiếm đề tài">
-       <span class="input-group-addon ">
-              <button type="submit" id="tkiem">
-              		<span class="glyphicon glyphicon-search "></span>
-              </button>
-       </span>
-  </div>
-  
-  <div style="color: rgb(7, 132, 163);" class"panel-heading"> 
-                <center><h1>DANH SÁCH ĐỀ TÀI</h1></center>
-              </div>
-  
+                      <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>
+
+
+                      <div class="table col-sm-5">
+                        <div class="row">
+                            <h3>Tìm kiếm</h3>
+                            <div id="custom-search-input">
+                                <div class="input-group col-md-12">
+                                    <input type="text" id="system-search" class="search-query form-control" placeholder="Nhập từ khóa..." required />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            var activeSystemClass = $('.list-group-item.active');
+    //something is entered in search form
+    $('#system-search').keyup( function() {
+     var that = this;
+        // affect all table rows on in systems table
+        var tableBody = $('.table-list-search tbody');
+        var tableRowsClass = $('.table-list-search tbody tr');
+        $('.search-sf').remove();
+        tableRowsClass.each( function(i, val) {
+
+            //Lower text for case insensitive
+            var rowText = $(val).text().toLowerCase();
+            var inputText = $(that).val().toLowerCase();
+            if(inputText != '')
+            {
+                $('.search-query-sf').remove();
+                tableBody.prepend('<tr class="search-query-sf"><td colspan="6"><strong>Searching for: "'
+                    + $(that).val()
+                    + '"</strong></td></tr>');
+            }
+            else
+            {
+                $('.search-query-sf').remove();
+            }
+
+            if( rowText.indexOf( inputText ) == -1 )
+            {
+                //hide rows
+                tableRowsClass.eq(i).hide();
+                
+            }
+            else
+            {
+                $('.search-sf').remove();
+                tableRowsClass.eq(i).show();
+            }
+        });
+        //all tr elements are hidden
+        if(tableRowsClass.children(':visible').length == 0)
+        {
+            tableBody.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
+        }
+    });
+});
+</script>
+
+<div class="container">
+    <div class="row">    
+
+    </div>
+</div>
+
+
+  <h1>Danh sách Đề Tài</h1>
   <table class="table" data-page-size="5">
-    		<TR align="center">
-              <th align="center" data-hide="phone"><u>Mã Đề Tài</u></th>
+    	<thead>
+    		
+                              <TR align="center">
+              <th align="center" data-hide="phone"><u>MĐT</u></th>
               <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
-              <th align="center" data-hide="phone,tablet"><u>SVTH</u></th>
+              <th align="center" data-hide="phone"><u>SVTH</u></th>
+              <th align="center" data-hide="phone,tablet"><u>GVHD</u></th>
               <th align="center" data-hide="phone,tablet"><u>Lĩnh vực</u></th>
               <th align="center" data-hide="phone,tablet"><u>Trạng Thái</u></th>
+              <th align="center" data-hide="phone,tablet"><u>Chi Tiết</u></th>
             </TR>
     		<% while(resultset.next()){ %>
             <TR>
-              <TD> <%= resultset.getString(1) %></td>
+              	<TD> <%= resultset.getString(1) %></td>
                 <TD> <%= resultset.getString(2) %></TD>
                 <TD> <%= resultset.getString(3) %></TD>
                 <TD> <%= resultset.getString(4) %></TD>
                 <TD> <%= resultset.getString(5) %></TD>
+                <TD> <%= resultset.getString(6) %></TD>
+                <TD><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></TD>
                 
               </TR>
               <% } %>
@@ -129,35 +194,41 @@ pageEncoding="utf-8"%>
     		</tr>
     	</tfoot>
     </table>
+
+<tfoot>
+ 
+</tfoot>
+</table>
 </div>
-  <div class="well-sm">
-        <span>
-            <span id="random_tin">
+
+<div class="well-sm">
+    <span>
+        <span id="random_tin">
             <i class="icon-bullhorn"></i>&nbsp;
             <img src="images/bullet-blue-icon.png" />
-                        <small>
+            <small>
                 <a href="http://dkdt.fit.hcmute.edu.vn/tin-tu-giao-vu/thong-bao-dang-ky-de-tai-tieu-luan-chuyen-nganh-khoa-12-201509061441549098.html">
-                Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
+                    Thông báo đăng ký đề tài tiểu luận chuyên ngành khóa 12 <small style="color: rgb(87,87,87);">(16:29 06/09/2015)</small>
                 </a>
             </small>
             <img src="images/new1.gif"/>
-            </span>
-           
-        </span>    
-    </div>
-                        
-                    <ol class="breadcrumb">
+        </span>
+
+    </span>    
+</div>
+
+<ol class="breadcrumb">
   <li><a href="#">Home</a></li><li class="active">Thông báo</li></ol>               </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div id="footer">
+</div>
+</div>
+</div>
+<div class="container">
+    <div id="footer">
         <hr />
-            <h5 class="text-center text-danger">Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh</h5>
-            <h5 class="text-center text-danger">Số 1, Võ Văn Ngân, Thủ Đức, TP. Hồ Chí Minh</h5>
-        </div>
+        <h5 class="text-center text-danger">Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh</h5>
+        <h5 class="text-center text-danger">Số 1, Võ Văn Ngân, Thủ Đức, TP. Hồ Chí Minh</h5>
     </div>
+</div>
 </div><!-- End #container -->
 <div id="loading">
     <span>Đang tải ...</span>

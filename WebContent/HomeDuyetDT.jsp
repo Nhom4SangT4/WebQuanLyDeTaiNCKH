@@ -16,7 +16,7 @@ pageEncoding="utf-8"%>
 
   Statement statement = connection.createStatement() ;
   ResultSet resultset = 
-  statement.executeQuery("select * from dangkydetai ") ; 
+  statement.executeQuery("select madetai,tendetai,hoten,gvhuongdan,linhvuc,TrangThai from dangkydetai ") ; 
   %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -169,25 +169,21 @@ pageEncoding="utf-8"%>
     		
                               <TR align="center">
               <th align="center" data-hide="phone"><u>MĐT</u></th>
-              <th align="center" data-hide="phone"><u>Họ Tên</u></th>
-              <th align="center" data-hide="phone,tablet"><u>MSSV</u></th>
-              <th align="center" data-hide="phone,tablet"><u>Khoa</u></th>
               <th align="center" data-hide="phone,tablet"><u>Tên Đề Tài</u></th>
-              <th align="center" data-hide="phone,tablet"><u>Giảng viên HD</u></th>
+              <th align="center" data-hide="phone"><u>SVTH</u></th>
+              <th align="center" data-hide="phone,tablet"><u>GVHD</u></th>
               <th align="center" data-hide="phone,tablet"><u>Lĩnh vực</u></th>
               <th align="center" data-hide="phone,tablet"><u>Trạng Thái</u></th>
               <th align="center" data-hide="phone,tablet"><u>Chi Tiết</u></th>
             </TR>
     		<% while(resultset.next()){ %>
             <TR>
-              <TD> <%= resultset.getString(1) %></td>
+              	<TD> <%= resultset.getString(1) %></td>
                 <TD> <%= resultset.getString(2) %></TD>
                 <TD> <%= resultset.getString(3) %></TD>
                 <TD> <%= resultset.getString(4) %></TD>
                 <TD> <%= resultset.getString(5) %></TD>
-                <TD> <%= resultset.getString(20) %></TD>
                 <TD> <%= resultset.getString(6) %></TD>
-                <TD> <%= resultset.getString(11) %></TD>
                 <TD><a target="_blank" href="ChitietdetaiRenactive.jsp" class="btn btn-success btn-xs">Chi tiết</a></TD>
                 
               </TR>
